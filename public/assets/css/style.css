@@ -1,0 +1,128 @@
+.dropdown-toggle::after {
+    display: none;
+}
+.nav-item > .nav-link {
+    font-weight: 600 !important;
+}
+.feather-16{
+    width: 16px;
+    height: 16px;
+}
+.feather-24{
+    width: 24px;
+    height: 24px;
+}
+.feather-32{
+    width: 32px;
+    height: 32px;
+}
+.search {
+    position: relative;
+}
+.search input {
+    height: 50px;
+    text-indent: 40px;
+    border: 2px solid #d6d4d4
+}
+.search input:focus {
+    box-shadow: none;
+    border: 2px solid --bs-primary
+}
+.search-icon {
+    position: absolute;
+    top: 12px;
+    left: 16px
+}
+.search button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    width: 110px;
+}
+.navbar {
+    z-index: 1000;
+}
+.hero-landing {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    height: 100vh;
+    margin-top: -66px;
+}
+.hero-txt > h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+.hero-txt > p {
+    font-size: 1.3rem;
+}
+.container-vertical {
+    height: 100%;
+    position: relative;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.fixed-top {
+    top: -40px;
+    transform: translateY(40px);
+    transition: transform .3s;
+}
+
+.transparent {
+    background: none;
+    background-color: transparent;
+}
+.profile-link {
+    font-weight: 600 !important;
+}
+.profile-dark {
+    color: rgba(255, 255, 255, 0.55);
+}
+.profile-dark:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/*Feature*/
+.category-card {
+    width: 100%;
+}
+
+.categories > div > a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+.c2-box img, .c2-box-txt img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all 450ms ease-in-out;
+    -moz-transition: all 450ms ease-in-out;
+    -o-transition: all 450ms ease-in-out;
+    -ms-transition: all 450ms ease-in-out;
+    transition: all 450ms ease-in-out;
+}
+.img-70 {
+    width: 70px;
+    height: 70px;
+}
+.categories > div > a {
+    color: #333;
+    text-decoration: none;
+    -webkit-transition: all 400ms ease-in-out;
+    -moz-transition: all 400ms ease-in-out;
+    -o-transition: all 400ms ease-in-out;
+    -ms-transition: all 400ms ease-in-out;
+    transition: all 400ms ease-in-out;
+}
+/*End of Feature*/
