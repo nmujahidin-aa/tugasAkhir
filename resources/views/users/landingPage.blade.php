@@ -3,23 +3,23 @@
 @section("content")
 
 <div class="bg-light hero-landing" style="background-image: url(/image/background.jpg);">
-	<div class="container container-vertical">
-	    <div class="vertical-center">
-	        <div class="row" style="max-width: 150%;">
-	            <div class="col-md-8 col-lg-12">
-	                <div class="hero-txt white-color text-center text-md-start">
-	                    <h1>Melihat Dunia,<br>dalam Satu Kali Tekan.</h1>
-	                    <p>Apa yang kamu cari? Semua ada disini, dan dapatkan secara <b>FREE</b></p>
-	                    </p>
-	                    <br>
-	                    <a href="" class="btn btn-success">
-	                    	<h5 class="m-2">Get Started <i class="fa fa-arrow-right"></i></h5>
-	                    </a>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
-	</div>
+  <div class="container container-vertical">
+    <div class="vertical-center">
+      <div class="row" style="max-width: 150%;">
+        <div class="col-md-8 col-lg-12">
+          <div class="hero-txt white-color text-center text-md-start">
+            <h1>Melihat Dunia,<br>dalam Satu Kali Tekan.</h1>
+            <p>Apa yang kamu cari? Semua ada disini, dan dapatkan secara <b>FREE</b></p>
+            </p>
+            <br>
+            <a href="users/login.blade.php" class="btn btn-success">
+              <h5 class="m-2">Get Started <i class="fa fa-arrow-right"></i></h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
@@ -28,69 +28,53 @@
 <!-- Features -->
 
 <div class="container d-flex justify-content-center">
-			  <div class="card shadow-lg category-card" style="padding: 20px; margin-top: -100px;">
-			    <div class="card-body">
-			      <div class="row">
-			        <div class="col-12 col-md-9 text-center text-md-start">
-			          <h4 class="card-title">Kategori Kompetisi</h4>
-			          <p class="card-text">Temukan kompetisi yang sesuai minat berdasarkan kategori.</p>
-			        </div>
-			      	<div class="col-12 col-md-3 text-center text-md-end" style="margin-top: 20px;">
-			        	<a href="https://competify.co.id/kategori" class="btn btn-primary btn-block shadow-lg">Lihat Semua</a>
-			      	</div>
-			    	</div>
-						<div class="row categories mt-5">
-							<div class="col-6 col-md-4 col-lg-2">
-				   		  <a href="/kategori/teknologi">
-					        <div class="c2-box-txt text-center">
-				            <img class="img-70" src="https://competify.co.id/assets/img/icon/20220526083826-xGC9gpakeMjIU0lsm2ILihgjcQXzOxoX8TnuWAfngQnblI8w3Hgtzrb7NrStH9lMGzk61DgTmnZlHlOIZLXOrrbghYAjLBpHt47S.jpg" alt="category-icon">
-				            <h5 class="h5-sm">Teknologi</h5>
-					        </div>
-				    		</a>
-							</div>                                                        
-							<div class="col-6 col-md-4 col-lg-2">
-				    	<a href="/kategori/desain">
-			        	<div class="c2-box-txt text-center">
-			          	<img class="img-70" src="https://competify.co.id/assets/img/icon/20220526063247-uqGHXW0lAPZlIV5migYdrLvDxm5b8RVMRobt8FaweR5YDsfMB2q1ZuHzCEmMrbXY6GLvmgQXPVtzoUWjvOhyrAnEsUL91IjtZ1Fr.jpg" alt="category-icon">
-			            <h5 class="h5-sm">Desain</h5>
-			        	</div>
-			    		</a>
-						</div>                                                        
-						<div class="col-6 col-md-4 col-lg-2">
-			    	<a href="/kategori/karya-tulis-ilmiah">
-				      <div class="c2-box-txt text-center">
-				        <img class="img-70" src="https://competify.co.id/assets/img/icon/20220526063253-uT01juZKm5XZPP56Qnxb4ich14dSsPcMXD57gKjmtoEbi0TQfmeBCgKhdKJHkhNZeip7fZ6kN6ETzrx5Lj44z2punJ1ftCvSwS6u.jpg" alt="category-icon">
-				        <h5 class="h5-sm">Karya Tulis Ilmiah</h5>
-				    	</div>
-				    </a>
-					</div>                                                        
-					<div class="col-6 col-md-4 col-lg-2">
-				    <a href="/kategori/bahasa">
-				      <div class="c2-box-txt text-center">
-				        <img class="img-70" src="https://competify.co.id/assets/img/icon/20220526063302-BNpWUejQHFj5ZA9ruVXfOpEagtjwIDeuFG8BEb3NzY5gpXZEQFld5fQQuu9N3I9tA88F4eVceQxvMpVFzxiTnQhFzLL9QE8oU0HK.jpg" alt="category-icon">
-				        <h5 class="h5-sm">Bahasa</h5>
-				    	</div>
-				    </a>
-					</div>                                                        
-					<div class="col-6 col-md-4 col-lg-2">
-			    <a href="/kategori/matematika">
-			      <div class="c2-box-txt text-center">
-			        <img class="img-70" src="https://competify.co.id/assets/img/icon/20220526063309-5RthY1W3ZDSPJnGybyqyW2wPTklqnUtLMAOPI6Zzm1sjpGZfdEeyt5b2jwXCVDQcNA06du74WkHtzoh3iB1RVmyCWpdexJZNswK9.jpg" alt="category-icon">
-			        <h5 class="h5-sm">Matematika</h5>
-			    	</div>
-				  </a>
-				</div>                                                        
-				<div class="col-6 col-md-4 col-lg-2">
-			    <a href="/kategori/geografi">
-			      <div class="c2-box-txt text-center">
-			        <img class="img-70" src="https://competify.co.id/assets/img/icon/20220526063317-Gc8PCvp56k3PRAaEgo9S2SsobeAXutIFq9st6I6JsJNEI89AsTL8PS0tCKVyG2IzahHdC5UcpQRsT6GEfIOZ5hfRI4p97mHFN1Bk.jpg" alt="category-icon">
-			        <h5 class="h5-sm">Geografi</h5>
-			    	</div>
-			    </a>
-				</div>                                
-			</div>	 
-		</div>
-	</div>
+  <div class="card shadow-lg category-card" style="padding: 20px; margin-top: -100px;">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12 col-md-9 text-center text-md-start">
+          <h4 class="card-title">Jenis Referensi yang Kamu Butuhkan</h4>
+          <p class="card-text">Temukan referensi yang sesuai berdasarkan jenis.</p>
+        </div>
+        <div class="col-12 col-md-3 text-center text-md-end" style="margin-top: 20px;">
+          <a href="{{route('explore')}}" class="btn btn-primary btn-block shadow-lg">Lihat Kategori</a>
+        </div>
+      </div>
+      <div class="row categories mt-5 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="/kategori/book">
+            <div class="c2-box-txt text-center">
+              <img class="img-70" src="image/book.png" alt="category-icon">
+              <h5 class="h5-sm pt-2">Buku</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="/kategori/journal">
+            <div class="c2-box-txt text-center">
+              <img class="img-70" src="image/journal.png" alt="category-icon">
+              <h5 class="h5-sm pt-2">Jurnal</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="/kategori/karya-tulis-ilmiah">
+            <div class="c2-box-txt text-center">
+              <img class="img-70" src="image/analysis.png" alt="category-icon">
+              <h5 class="h5-sm pt-2">Karya Tulis Ilmiah</h5>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <a href="/kategori/article">
+            <div class="c2-box-txt text-center">
+              <img class="img-70" src="image/article.png" alt="category-icon">
+              <h5 class="h5-sm pt-2">Artikel</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- Features -->
@@ -109,14 +93,14 @@
           <h3> Selamat datang di Rumah Pustaka</h3>
           <p class="fst-italic">
 
-           Rumah pustaka adalah sebuah website yang hadir sejak November 2022.
-          Platform online kami dirancang untuk membantu pengguna mencari berbagai macam jurnal maupun buku dengan mudah secara online.
-          <br>
+            Rumah pustaka adalah sebuah website yang hadir sejak November 2022.
+            Platform online kami dirancang untuk membantu pengguna mencari berbagai macam jurnal maupun buku dengan mudah secara online.
+            <br>
           </p>
 
           <p class="fst-italic">
-          Website kami menyediakan anda jurnal dan buku yang paling inovatif dan menarik khusus untuk memenuhi kebutuhan anda sebagai Pengguna
-          Yakinlah bahwa ketika Anda membuka  Rumah Pustaka, Anda akan menerima informasi yang Anda butuhkan dengan berbagai pilihan baru, unik dan Menarik.
+            Website kami menyediakan jurnal dan buku yang inovatif dan menarik, khusus untuk memenuhi kebutuhan anda sebagai Pengguna!
+            Yakinlah bahwa ketika Anda membuka Rumah Pustaka, Anda akan menerima informasi yang Anda butuhkan dengan berbagai pilihan baru, unik, dan Menarik.
           </p>
         </div>
       </div>
@@ -164,10 +148,10 @@
           <div class="content">
             <h3>Mengapa Harus Rumah Pustaka?</h3>
             <p>
-            Rumah Pustaka mempromosikan dan mendukung akses buku akademik dengan menyediakan layanan infrastruktur terbuka bagi Pengguna.
-            <br>
-            Kami bekerjasama dengan penerbit dan penulis buku untuk akses terbuka yang terkontrol kualitas dan menyediakan layanan untuk penerbit, dan 
-            perpustakaan.
+              Rumah Pustaka mempromosikan dan mendukung akses buku akademik dengan menyediakan layanan infrastruktur terbuka bagi Pengguna.
+              <br>
+              Kami bekerjasama dengan penerbit dan penulis buku untuk akses terbuka yang terkontrol kualitasnya dan menyediakan layanan untuk penerbit, dan
+              perpustakaan.
             </p>
             <div class="text-center">
               <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -202,7 +186,6 @@
           </div><!-- End .content-->
         </div>
       </div>
-
     </div>
   </section><!-- End Why Us Section -->
 
@@ -280,7 +263,7 @@
         <div class="col-lg-3 col-md-4 mt-4">
           <div class="icon-box">
             <i class="ri-fingerprint-line" style="color: #29cc61;"></i>
-            <h3><a href="">Non- Akademik</a></h3>
+            <h3><a href="">Non-Akademik</a></h3>
           </div>
         </div>
       </div>

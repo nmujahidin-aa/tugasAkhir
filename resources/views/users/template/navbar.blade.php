@@ -3,9 +3,9 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="menu-mobile" aria-expanded="false" aria-label="Toggle navigation">
       <i data-feather="menu"></i>
     </button>
-      <a class="navbar-brand logo-light" href="">
-        <img src="image/logo.png" alt="Rupus" height="40px">
-      </a>
+    <a class="navbar-brand logo-light" href="">
+      <img src="image/logo.png" alt="Rupus" height="40px">
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation">
       <i data-feather="search"></i>
     </button>
@@ -22,13 +22,13 @@
       </div>
       <ul id="navbar-menu" class="navbar-nav my-2 me-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link  active" aria-current="page" href="">Home</a>
+          <a class="nav-link  @if(request()->routeIs('home')) active @endif" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="">Explore</a>
+          <a class="nav-link @if(request()->routeIs('explore')) active @endif" href="{{route('explore')}}">Explore</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="">Upload</a>
+          <a class="nav-link @if(request()->routeIs('upload')) active @endif" href="{{route('upload')}}">Upload</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -43,15 +43,15 @@
       <div class="text-end ms-auto">
         <form class="d-flex">
           <input class="form-control me-2" type="search" id="search_val" placeholder="Search" aria-label="Search">
-         <button class="btn btn-success shadow-none" id="btn_search" type="submit">Search</button>
+          <button class="btn btn-success shadow-none" id="btn_search" type="submit">Search</button>
         </form>
       </div>
     </div>
   </div>
-</nav>      
+</nav>
 
 
-<div class="offcanvas offcanvas-top dark-bg"  tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasTopLabel">
+<div class="offcanvas offcanvas-top dark-bg" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasTopLabel">
   <!-- Offcanvas Header Start -->
   <div class="offcanvas-header">
     <h5 id="offcanvasTopLabel" style="margin-left: 12px;">Cari</h5>
@@ -83,19 +83,19 @@
     <h5 class="offcanvas-title" id="menu-mobileLabel">
       <img src="/image/logo.png" height="30" alt="Rupus">
     </h5>
-      <button style="margin-top: 4px;" type="button" class="btn navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
-        <i data-feather="x"></i>
-      </button>
-    </div>
-    <div class="offcanvas-body">
-      <div class="mt-2 pt-2">
-        <div class="card shadow-sm" style="padding: 8px; padding-bottom: 12px;">
-          <div class="d-flex container">
-            <div class="flex-fill my-auto">
-              <small class="text-muted">Cari Referensi?</small>
-            </div>
-            <div class="my-auto pt-1">
-              <a href="/login" class="btn btn-success">Get Started</a>
+    <button style="margin-top: 4px;" type="button" class="btn navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i data-feather="x"></i>
+    </button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="mt-2 pt-2">
+      <div class="card shadow-sm" style="padding: 8px; padding-bottom: 12px;">
+        <div class="d-flex container">
+          <div class="flex-fill my-auto">
+            <small class="text-muted">Cari Referensi?</small>
+          </div>
+          <div class="my-auto pt-1">
+            <a href="/login" class="btn btn-success">Get Started</a>
           </div>
         </div>
       </div>

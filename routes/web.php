@@ -15,4 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('users.landingPage');
-});
+})->name("home");
+
+Route::get('/explore', function () {
+    return view('users.explore');
+})->name("explore");
+
+Route::get('/upload', function () {
+    return view('users.upload');
+})->name("upload");
+
+Route::get('/admin', function () {
+    return view('admin.homepage');
+})->name("adminpage");
