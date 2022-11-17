@@ -14,12 +14,21 @@
 							@csrf
 							<h3 class="text-center"><strong>Register</strong> </h3>
 							<div class="form-group mb-2">
-								<label>Email</label>
+								<label>Nama</label>
 								<input type="text" class="form-control @error('email') is-invalid @enderror" name="email">
-								@error("email")
+								@error("nama")
 								<p class="text-danger">{{$message}}</p>
 								@enderror
 							</div>
+
+							<div class="form-group mb-2">
+								<label>Nama</label>
+								<input type="text" class="form-control @error('email') is-invalid @enderror" name="email">
+								@error("nama")
+								<p class="text-danger">{{$message}}</p>
+								@enderror
+							</div>
+							
 							<div class="form-group mb-2">
 								<label>Password</label>
 								<input type="password" class="form-control @error('password') is-invalid @enderror" name="password">
