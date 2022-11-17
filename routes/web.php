@@ -14,17 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.landingPage');
-})->name("home");
+    return view('users/landingPage');
+});
+Route::get('/login', function () {
+    return view('users/login');
+});
 
-Route::get('/explore', function () {
-    return view('users.explore');
-})->name("explore");
-
-Route::get('/upload', function () {
-    return view('users.upload');
-})->name("upload");
-
-Route::get('/admin', function () {
-    return view('admin.homepage');
-})->name("adminpage");
