@@ -231,9 +231,18 @@
 	<!-- End Team Section -->
 
 	<hr class="container">
-
-	<div class="container">
-		<h3 class="text-center container"><strong>Tingkatkan penelitian Anda dan bergabunglah dengan komunitas yang terdiri dari jutaan ilmuwan</h3>
+	<div class="container py-5">
+		<div class="card">
+			<div class="card-body bg-success" style="shadow: ">
+				
+				<h3 class="text-center container text-white py-5"><strong>Tingkatkan penelitian Anda dan bergabunglah dengan komunitas yang terdiri dari jutaan ilmuwan</h3>
+				<a href="/login">
+					<div class="text-center">
+						<div class="btn text-success px-5" style="background: #fff;"><strong>Login</strong></div>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div>
 
 	</main>
