@@ -13,6 +13,11 @@ class UsersController extends Controller
         return view('users.landingPage');
     }
 
+    public function home()
+    {
+        return view('users.homePage');
+    }
+
     public function login()
     {
         return view('users.login');

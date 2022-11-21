@@ -4,11 +4,8 @@
 	@include('layout.layoutHead')
 </head>
 <body>
-	@include('layout.layoutNavbar')
+	@include('layout.layoutNavbarHome')
 
-	
-
-	@include('layout.layoutFooter')
 	@include('layout.layoutScript')
 </body>
 </html>
