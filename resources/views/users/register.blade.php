@@ -13,7 +13,7 @@
             class="img-fluid" alt="Sample image">
         </div>
         <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-          <form method="POST" action="/register">
+          <form method="POST" action="{{route('register.index')}} " autocomplete="off">
             @csrf
             <div class="divider d-flex align-items-center my-4">
               <p class="text-center fw-bold fs-5 mx-3 mb-0">Daftar</p>
@@ -22,14 +22,14 @@
             <!-- Name input -->
             <div class="form-outline mb-1">
               <label class="form-label" for="nama">Nama Lengkap</label>
-              <input type="text" id="nama" name="nama" class="form-control form-control-lg @error('nama') is-invalid @enderror"
-                placeholder="Enter a valid email address" />
+              <input type="text" id="nama" name="name" class="form-control form-control-lg @error('name') is-invalid @enderror"
+                placeholder="Masukkan nama kamu" />
             </div>
 
             <div class="form-outline mb-1">
               <label class="form-label" for="email">Email</label>
               <input type="email" id="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
-                placeholder="Enter a valid email address" />
+                placeholder="Masukkan email" />
             </div>
 
             <div class="form-outline mb-1">
@@ -42,20 +42,20 @@
             <div class="form-outline mb-1">
               <label class="form-label" for="password">Password</label>
               <input type="password" id="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror"
-                placeholder="Enter password" />
+                placeholder="Buat Password" />
             </div>
 
             <div class="form-outline mb-1">
               <label class="form-label" for="password">Ulangi Password</label>
               <input type="password" id="password" name="password_confirmation" class="form-control form-control-lg @error('password') is-invalid @enderror"
-                placeholder="Enter password" />
+                placeholder="Buat Password" />
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
               <button class="btn btn-primary btn-lg"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0">have an account? <a href="/"
-                  class="link-danger">Login</a></p>
+              <p class="small fw-bold mt-2 pt-1 mb-0">have an account? 
+              <a href="{{route('login.index')}}" class="link-primary">Login</a></p>
             </div>
 
           </form>

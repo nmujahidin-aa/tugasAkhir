@@ -31,7 +31,8 @@ class UserSeeder extends Seeder
         $user = User::firstOrCreate([
             'email' => 'user@gmail.com'
         ],[
-            'name' => 'Teacher',            'email' => 'user@gmail.com',
+            'name' => 'User',            
+            'email' => 'user@gmail.com',
             'phone' => '085769782100',
             'password' => bcrypt('123456789'),
             'email_verified_at' => date('Y-m-d H:i:s'),

@@ -26,22 +26,16 @@
 
 	          <!-- Email input -->
 	          <div class="form-outline mb-4">
+	          	<label class="form-label " for="email">Email address</label>
 	            <input type="email" id="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
 	              placeholder="Example@email.com" value="{{old('email')}}">
-	            <label class="form-label " for="email">Email address</label>
-	            @error("email")
-	            <p class="text-danger">{{$message}}</p>
-	            @enderror
 	          </div>
 
 	          <!-- Password input -->
 	          <div class="form-outline mb-3">
+	            <label class="form-label" for="password">Password</label>
 	            <input type="password" id="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror"
 	              placeholder="Enter password">
-	            <label class="form-label" for="password">Password</label>
-	            @error("password")
-	            <p class="text-danger">{{$message}}</p>
-	            @enderror
 	          </div>
 
 	          <div class="d-flex justify-content-between align-items-center">
@@ -52,7 +46,7 @@
 	                Remember me
 	              </label>
 	            </div>
-	            <a href="#!" class="text-body">Forgot password?</a>
+	            <a href="" class="text-body">Forgot password?</a>
 	          </div>
 
 	          <div class="text-center text-lg-start mt-4 pt-2">
@@ -65,31 +59,6 @@
 	        </form>
 	      </div>
 	    </div>
-	  </div>
-	  <div
-	    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-	    <!-- Copyright -->
-	    <div class="text-white mb-3 mb-md-0">
-	      Copyright © 2020. All rights reserved.
-	    </div>
-	    <!-- Copyright -->
-
-	    <!-- Right -->
-	    <div>
-	      <a href="#!" class="text-white me-4">
-	        <i class="fab fa-facebook-f"></i>
-	      </a>
-	      <a href="#!" class="text-white me-4">
-	        <i class="fab fa-twitter"></i>
-	      </a>
-	      <a href="#!" class="text-white me-4">
-	        <i class="fab fa-google"></i>
-	      </a>
-	      <a href="#!" class="text-white">
-	        <i class="fab fa-linkedin-in"></i>
-	      </a>
-	    </div>
-	    <!-- Right -->
 	  </div>
 	</section>
 

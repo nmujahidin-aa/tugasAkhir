@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -16,21 +19,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[UsersController::class,'index'])->name("landing-page.index");
-Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
 
-Route::get('/login',[UsersController::class,'login'])->name("login.index");
-Route::post('/login',[UsersController::class,'loginPost'])->name("login.post");
+Route::get('/login',[LoginController::class,'index'])->name("login.index");
+Route::post('/login',[LoginController::class,'login'])->name("login.post");
 
 Route::get('/logout',[UsersController::class,'logout'])->name("logout.post");
 
-Route::get('/register',[UsersController::class,'register'])->name("register.index");
-Route::post('/register',[UsersController::class,'registerPost'])->name("register.post");
+Route::get('/register',[RegisterController::class,'index'])->name("register.index");
+Route::post('/register',[RegisterController::class,'register'])->name("register.post");
 
 Route::group(['middleware' => ['auth']], function () {
-	Route::get('/dashboard',function(){
-		dd("kamu berhasil login");
-	})->name("dashboard.index");
-
-
+	Route::get('/homepage',[UsersController::class,'home'])->name("homepage.index");
 });
 

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	@include('layout.layoutHead')
+	@include('layout.HomePage.layoutHead')
 </head>
 <body>
-	@include('layout.layoutNavbarHome')
+	@include('layout.HomePage.layoutNavbarHome')
 
-	@include('layout.layoutScript')
+	@include('layout.HomePage.layoutScript')
 </body>
 </html>

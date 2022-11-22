@@ -10,11 +10,12 @@ class RegisterRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'nama' => [
+            'name' => [
                 'required',
             ],
             'email' => [
                 'required',
+                'unique:users,email'
             ],
             'phone' => [
                 'required',
@@ -32,7 +33,7 @@ class RegisterRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'nama.required'     => 'Nama harus diisi',
+            'name.required'     => 'Nama harus diisi',
             'email.required'    => 'Email harus diisi',
             'phone.required'    => 'No. Handphone harus diisi',
             'phone.min'         => 'No. Handphone harus 10-12 karakter',
