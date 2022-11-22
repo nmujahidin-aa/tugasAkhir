@@ -1,66 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	@include('layout.layoutHead')
+	@include('layout.Login.layoutHead')
 </head>
 <body style="background: #ebefee">
+  @include('sweetalert::alert')
+  <section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+          <form method="POST" action="/register">
+            @csrf
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold fs-5 mx-3 mb-0">Daftar</p>
+            </div>
 
-		<section class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-5">
-					<div class="card">
-						<div class="card-body shadow-lg bg-body rounded">
-							<form method="POST" action="/login">
-								@csrf
-								<div class="text-center">
-				                    <img src="image/logo.png" height="50"  alt="RumahPustaka">
-				                </div>
-				                <hr>
-								<p class="text-center h4   mx-1 mx-md-4 mt-4">Daftar</p>
-                  				<p class="text-center "style="font-weight: 350; font-size:15px;"> sudah punya akun? 
-                  					<a href="/login" style="font-weight: 350; font-size:15px; text-decoration:none">Masuk</a>
-                  				</p>
+            <!-- Name input -->
+            <div class="form-outline mb-1">
+              <label class="form-label" for="nama">Nama Lengkap</label>
+              <input type="text" id="nama" name="nama" class="form-control form-control-lg @error('nama') is-invalid @enderror"
+                placeholder="Enter a valid email address" />
+            </div>
 
-	                  			<div class="form-floating mb-2">
-			                        <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" id="nama" placeholder="name@example.com" autofocus="">
-			                        <label for="email">Nama</label>
-									@error("nama")
-									<p class="text-danger">{{$message}}</p>
-									@enderror
-								</div>
-								<div class="form-floating mb-2">
-			                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="name@example.com" autofocus="">
-			                        <label for="email">Email</label>
-									@error("email")
-									<p class="text-danger">{{$message}}</p>
-									@enderror
-								</div>
-								<div class="form-floating mb-2">
-				                    <input type="Password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="password" autofocus="">
-				                    <label for="email">Kata Sandi</label>
-									@error("password")
-									<p class="text-danger">{{$message}}</p>
-									@enderror
-								</div>
-								<div class="d-grid gap-2 mb-1">
-				                  <button class="btn btn-primary">Daftar</button>
-				                </div>	
-				                <div class=" d-flex justify-content-center mb-4 ">
-				                  <label class="form-check-label" for="form2Example3">
-				                    <a href="forgot" style="font-weight: 450; font-size:15px; text-decoration:none">Lupa kata sandi ?</a> 
-				                  </label>
-				                </div>					
-				            </form>
-						</div>
-					</div> 
-					<div class="justify-content-start mx-2">
-				    	<a href="" class="text-decoration-none text-secondary" style="font-size: 10px;">&copy Rumah_Pustaka</a>
-				    	<a href="" class="text-decoration-none text-secondary" style="font-size: 10px;">Terms</a>
-				    </div>
-				</div>
-			</div>
-		</section>
+            <div class="form-outline mb-1">
+              <label class="form-label" for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
+                placeholder="Enter a valid email address" />
+            </div>
 
-	@include('layout.layoutScript')
+            <div class="form-outline mb-1">
+              <label class="form-label" for="phone">No. Handphone</label>
+              <input type="number" id="phone" name="phone" class="form-control form-control-lg @error('phone') is-invalid @enderror"
+                placeholder="Masukkan No. Handphone" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-1">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror"
+                placeholder="Enter password" />
+            </div>
+
+            <div class="form-outline mb-1">
+              <label class="form-label" for="password">Ulangi Password</label>
+              <input type="password" id="password" name="password_confirmation" class="form-control form-control-lg @error('password') is-invalid @enderror"
+                placeholder="Enter password" />
+            </div>
+
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <button class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+              <p class="small fw-bold mt-2 pt-1 mb-0">have an account? <a href="/"
+                  class="link-danger">Login</a></p>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+	@include('layout.Login.layoutScript')
 </body>
 </html>

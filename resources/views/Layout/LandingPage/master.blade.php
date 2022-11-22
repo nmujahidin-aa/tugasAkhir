@@ -4,6 +4,8 @@
 	@include('layout.landingPage.layoutHead')
 </head>
 <body>
+	@include('sweetalert::alert')
+	
 	@include('layout.landingPage.layoutNavbar')
 
 	@yield('content')

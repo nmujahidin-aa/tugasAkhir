@@ -15,13 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[UsersController::class,'index']);
-Route::get('/home',[UsersController::class,'home']);
+Route::get('/',[UsersController::class,'index'])->name("landing-page.index");
+Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
 
-Route::get('/login',[UsersController::class,'login']);
-Route::post('/login',[UsersController::class,'loginPost']);
+Route::get('/login',[UsersController::class,'login'])->name("login.index");
+Route::post('/login',[UsersController::class,'loginPost'])->name("login.post");
 
-Route::get('/register',[UsersController::class,'register']);
-Route::post('/register',[UsersController::class,'registerPost']);
+Route::get('/logout',[UsersController::class,'logout'])->name("logout.post");
 
+Route::get('/register',[UsersController::class,'register'])->name("register.index");
+Route::post('/register',[UsersController::class,'registerPost'])->name("register.post");
+
+Route::group(['middleware' => ['auth']], function () {
+	Route::get('/dashboard',function(){
+		dd("kamu berhasil login");
+	})->name("dashboard.index");
+
+
+});
 
