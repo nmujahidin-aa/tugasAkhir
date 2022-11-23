@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	@include('layout.HomePage.layoutHead')
-</head>
-<body>
-	@include('layout.HomePage.layoutNavbarHome')
+@extends('layout.HomePage.master')
+@section('content')
 
-	@include('layout.HomePage.layoutScript')
-</body>
-</html>
+<div>
+	difu
+</div>
+
+@endsection
