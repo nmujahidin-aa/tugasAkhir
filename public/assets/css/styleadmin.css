@@ -1,0 +1,15 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 1024px;
+}
+
+/* Sidebar Style */
+.sidebar {
+    width: 400px;
+    height: 1024px;
+}
+/* Sidebar End */
