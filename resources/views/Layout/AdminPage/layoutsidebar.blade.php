@@ -2,7 +2,6 @@
     <div class="header">
         <div class="list-item">
             <a href="#">
-                <h1>test bagian header</h1>
             </a>
         </div>
     </div>
@@ -13,6 +12,15 @@
             </a>
             <a href="#">
                 <h1>User</h1>
+            </a>
+            <a href="#">
+                <h1>Book</h1>
+            </a>
+            <a href="#">
+                <h1>FAQ</h1>
+            </a>
+            <a href="#">
+                <h1>About Us</h1>
             </a>
         </div>
     </div>

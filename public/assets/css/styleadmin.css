@@ -27,3 +27,19 @@
 .sidebar a {
     text-decoration: none;
 }
+
+.sidebar .main .list-item {
+    background-color: aqua;
+    /* Dashboard */
+    width: 262px;
+    height: 33px;
+    left: 69px;
+    top: 383px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 35px;
+    text-align: center;
+
+    color: #ffffff;
+}
