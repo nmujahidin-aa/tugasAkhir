@@ -1,15 +1,29 @@
 * {
     font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
     display: flex;
-    min-height: 1024px;
+    min-height: 100vh;
 }
 
-/* Sidebar Style */
 .sidebar {
+    background-color: #34453d;
     width: 400px;
-    height: 1024px;
+    height: 100vh;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
 }
-/* Sidebar End */
+
+.main-content {
+    background-color: #ffffff;
+    flex-grow: 1;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
