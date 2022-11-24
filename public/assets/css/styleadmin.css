@@ -31,15 +31,17 @@
 .sidebar .main .list-item {
     background-color: aqua;
     /* Dashboard */
+    display: flex;
+    flex-direction: row;
+    text-align: center;
     width: 262px;
     height: 33px;
     left: 69px;
     top: 383px;
+    font-family: "Montserrat";
     font-style: normal;
     font-weight: 700;
     font-size: 29px;
     line-height: 35px;
-    text-align: center;
-
     color: #ffffff;
 }
