@@ -1,19 +1,19 @@
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{URL::to('/')}}/assets/js/jquery.min.js"></script>
+<script src="{{URL::to('/')}}/assets/js/bootstrap.bundle.min.js"></script>
 
 
 <!-- Vendor JS Files -->
-<script src="/vendor/aos/aos.js"></script>
-<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="/vendor/php-email-form/validate.js"></script>
+<script src="{{URL::to('/')}}/vendor/aos/aos.js"></script>
+<script src="{{URL::to('/')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{URL::to('/')}}/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="{{URL::to('/')}}/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="{{URL::to('/')}}/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="{{URL::to('/')}}/vendor/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
-<script src="/assets/js/main.js"></script>
+<script src="{{URL::to('/')}}/assets/js/main.js"></script>
 
-<script type="text/javascript" src="/assets/js/slick.min.js"></script>
+<script type="text/javascript" src="{{URL::to('/')}}/assets/js/slick.min.js"></script>
 
 
 

@@ -4,6 +4,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\PustakaController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -30,5 +31,13 @@ Route::post('/register',[RegisterController::class,'register'])->name("register.
 
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
+	Route::get('/create',[PustakaController::class, 'index'])->name("create.index");
+
+	Route::group(["as" => "pustaka." , "prefix" => "pustaka"],function(){
+		Route::get('/{pustaka}/edit',[PustakaController::class, 'edit'])->name("edit");
+		Route::post('/',[PustakaController::class, 'store'])->name("store");
+		Route::put('/{pustaka}',[PustakaController::class, 'update'])->name("update");
+		Route::delete('/{pustaka}',[PustakaController::class, 'destroy'])->name("destroy");
+	});
 });
 

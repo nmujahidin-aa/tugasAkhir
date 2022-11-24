@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">
-      <img src="/image/logo.png" alt="" height="40">
+      <img src="{{URL::to('/')}}/image/logo.png" alt="" height="40">
     </a>
     <div class="justify-content-end">
       
