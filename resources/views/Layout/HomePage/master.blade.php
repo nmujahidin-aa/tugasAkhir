@@ -9,7 +9,9 @@
 
 	@include('layout.Homepage.layoutNavbarHome')
 
-	@yield('content')
+	<div style="min-height: 100vh; background: #e9ecef;">
+		@yield('content')
+	</div>
 
 
 	@include('layout.Homepage.layoutFooter')

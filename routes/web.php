@@ -21,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[UsersController::class,'index'])->name("landing-page.index");
 
-Route::get('/login',[LoginController::class,'index'])->name("login.index");
+Route::get('/login', [LoginController::class,'index'])->name("login.index");
 Route::post('/login',[LoginController::class,'login'])->name("login.post");
 
 Route::get('/logout',[logoutController::class,'logout'])->name("logout.post");

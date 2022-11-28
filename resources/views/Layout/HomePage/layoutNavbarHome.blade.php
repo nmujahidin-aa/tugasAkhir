@@ -28,18 +28,34 @@
           <a class="nav-link active" aria-current="page" href="">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Rate</a>
-        </li>
-        <li class="nav-item">
-          <a href="{{route('create.index')}} " class="btn btn-primary">Upload Pustaka</a>
+          <a class="nav-link active" aria-current="page" href="">Contact</a>
         </li>
       </ul>
-      <div class="text-end ms-auto">
+      <div class=" ms-auto mx-2">
         <form class="d-flex">
           <input class="form-control me-2" type="search" id="search_val" placeholder="Search" aria-label="Search">
           <button class="bx bx-search" id="btn_search" type="submit" style="border-color: transparent"></button>
         </form>
       </div>
+
+      <div class="mx-2 dropdown">
+        <a class="" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: transparent;">
+          <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Profil Saya</a></li>
+          <li><a class="dropdown-item" href="#">Buku Saya</a></li>
+          <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+          <hr>
+          <li><a class="dropdown-item" href="{{route('logout.post')}} ">Keluar</a></li>
+        </ul>
+      </div>
+      
+      <ul id="navbar-menu" class="navbar-nav my-2 me-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a href="{{route('create.index')}} " class="btn btn-primary rounded-3"> Upload </a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
@@ -90,9 +106,8 @@
         </div>
       </div>
       <a class="dropdown-item menu-item-collapse " href=""><span>Home</span></a>
-      <a class="dropdown-item menu-item-collapse " href=""><span>Explore</span></a>
-      <a class="dropdown-item menu-item-collapse " href=""><span>Upload</span></a>
-      <a class="dropdown-item menu-item-collapse " href=""><span>E-Book</span></a>
+      <a class="dropdown-item menu-item-collapse " href=""><span>News</span></a>
+      <a class="dropdown-item menu-item-collapse " href=""><span>Contact</span></a>
       <div class="fixed-bottom" style="padding-bottom: 30px !important;">
         <small style="margin-left: 17px;" class="text-muted">&copy Rumah Pustaka</small>
       </div>

@@ -34,39 +34,6 @@ h6,
 }
 
 /*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: #eb5d1e;
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 24px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #ee7843;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -93,7 +60,7 @@ h6,
   height: 70vh;
   background: #ebefee;
   border-bottom: 2px solid #ebefee;
-  margin: 72px 0 -72px 0;
+  margin: 65px 0 -72px 0;
 }
 
 #hero h1 {
@@ -125,7 +92,7 @@ h6,
 }
 
 #hero .btn-get-started:hover {
-  background: #ef7f4d;
+  background: black;
 }
 
 #hero .animated {

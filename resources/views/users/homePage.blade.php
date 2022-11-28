@@ -1,7 +1,7 @@
 @extends('layout.HomePage.master')
 @section('content')
 
-<div style="margin-top: 65px; background: #e9ecef;">
+<div style="margin-top: 65px;">
 
 	<div class="row">
 		<!-- Bagian Kiri Start -->
