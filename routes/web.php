@@ -19,25 +19,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[UsersController::class,'index'])->name("landing-page.index");
+Route::get('/', [UsersController::class, 'index'])->name("landing-page.index");
 
-Route::get('/login',[LoginController::class,'index'])->name("login.index");
-Route::post('/login',[LoginController::class,'login'])->name("login.post");
+Route::get('/login', [LoginController::class, 'index'])->name("login.index");
+Route::post('/login', [LoginController::class, 'login'])->name("login.post");
 
-Route::get('/logout',[logoutController::class,'logout'])->name("logout.post");
+Route::get('/logout', [UsersController::class, 'logout'])->name("logout.post");
 
-Route::get('/register',[RegisterController::class,'index'])->name("register.index");
-Route::post('/register',[RegisterController::class,'register'])->name("register.post");
+Route::get('/register', [RegisterController::class, 'index'])->name("register.index");
+Route::post('/register', [RegisterController::class, 'register'])->name("register.post");
 
 Route::group(['middleware' => ['auth']], function () {
-	Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
-	Route::get('/create',[PustakaController::class, 'index'])->name("create.index");
-
-	Route::group(["as" => "pustaka." , "prefix" => "pustaka"],function(){
-		Route::get('/{pustaka}/edit',[PustakaController::class, 'edit'])->name("edit");
-		Route::post('/',[PustakaController::class, 'store'])->name("store");
-		Route::put('/{pustaka}',[PustakaController::class, 'update'])->name("update");
-		Route::delete('/{pustaka}',[PustakaController::class, 'destroy'])->name("destroy");
-	});
+	Route::get('/homepage', [UsersController::class, 'home'])->name("homepage.index");
 });
 
+Route::get('/admin/dashboard', function () {
+	return view('admin.exdashboard');
+})->name("exdashboard");
