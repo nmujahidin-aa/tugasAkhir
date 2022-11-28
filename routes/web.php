@@ -21,8 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UsersController::class, 'index'])->name("landing-page.index");
 
-Route::get('/login', [LoginController::class,'index'])->name("login.index");
-Route::post('/login',[LoginController::class,'login'])->name("login.post");
+Route::get('/login', [LoginController::class, 'index'])->name("login.index");
+Route::post('/login', [LoginController::class, 'login'])->name("login.post");
 
 Route::get('/login', [LoginController::class, 'index'])->name("login.index");
 Route::post('/login', [LoginController::class, 'login'])->name("login.post");
@@ -34,18 +34,17 @@ Route::get('/register', [RegisterController::class, 'index'])->name("register.in
 Route::post('/register', [RegisterController::class, 'register'])->name("register.post");
 
 Route::group(['middleware' => ['auth']], function () {
-	Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
-	Route::get('/create',[PustakaController::class, 'index'])->name("create.index");
+	Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
+	Route::get('/create', [PustakaController::class, 'index'])->name("create.index");
 
-		Route::group(["as" => "pustaka." , "prefix" => "pustaka"],function(){
-			Route::get('/{pustaka}/edit',[PustakaController::class, 'edit'])->name("edit");
-			Route::post('/',[PustakaController::class, 'store'])->name("store");
-			Route::put('/{pustaka}',[PustakaController::class, 'update'])->name("update");
-			Route::delete('/{pustaka}',[PustakaController::class, 'destroy'])->name("destroy");
+	Route::group(["as" => "pustaka.", "prefix" => "pustaka"], function () {
+		Route::get('/{pustaka}/edit', [PustakaController::class, 'edit'])->name("edit");
+		Route::post('/', [PustakaController::class, 'store'])->name("store");
+		Route::put('/{pustaka}', [PustakaController::class, 'update'])->name("update");
+		Route::delete('/{pustaka}', [PustakaController::class, 'destroy'])->name("destroy");
 	});
 });
 
 Route::get('/admin/dashboard', function () {
 	return view('admin.exdashboard');
 })->name("exdashboard");
-
