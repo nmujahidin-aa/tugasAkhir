@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm" id="navbar_top">
-  <div class="container-lg">
+  <div class="container">
     <div class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu-mobile" aria-controls="menu-mobile" aria-expanded="false" aria-label="Toggle navigation" style="border-color: transparent !important;">
       <i class="bx bx-menu"></i>
     </div>
@@ -33,14 +33,14 @@
       </ul>
       <div class=" ms-auto mx-2">
         <form class="d-flex">
-          <input class="form-control me-2" type="search" id="search_val" placeholder="Search" aria-label="Search">
-          <button class="bx bx-search" id="btn_search" type="submit" style="border-color: transparent"></button>
+          <input class="form-control" type="search" id="search_val" placeholder="Search" aria-label="Search">
+          <button class="bx bx-search" id="btn_search" type="submit" style="border-color: transparent; background-color: transparent;"></button>
         </form>
       </div>
 
       <div class="mx-2 dropdown">
         <a class="" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: transparent;">
-          <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
+          <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 6vh;">
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="#">Profil Saya</a></li>
@@ -51,9 +51,9 @@
         </ul>
       </div>
       
-      <ul id="navbar-menu" class="navbar-nav my-2 me-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+      <ul id="navbar-menu" class="navbar-nav my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a href="{{route('create.index')}} " class="btn btn-primary rounded-3"> Upload </a>
+          <a href="{{route('pustaka.create')}} " class="btn btn-primary px-3" style="border-radius: 50px;"> Upload </a>
         </li>
       </ul>
     </div>
@@ -91,26 +91,51 @@
       <img src="/image/logo.png" height="30" alt="Rupus">
     </h5>
     <button style="margin-top: 4px;" type="button" class="btn navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
+      <i class="bx bx-x"></i>
     </button>
   </div>
   <div class="offcanvas-body">
     <div class="mt-2 pt-2">
-      <div class="card shadow-sm" style="padding: 8px; padding-bottom: 12px;">
-        <div class="d-flex container">
-          <div class="flex-fill my-auto">
-            <small class="text-muted">Cari Referensi?</small>
+      
+     
+
+      
+      <div class="card">
+        <div class="card-body shadow-sm">
+          
+          <nav class="navbar">
+            <div class="container-fluid">
+              <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
+              <div class="bx bx-chevron-down fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+              </div>
+            </div>
+          </nav>
+          <div class="collapse" id="navbarToggleExternalContent">
+            <div class="">
+              <hr>
+              <a class="dropdown-item menu-item-collapse " href="">Profil Saya</a>
+              <a class="dropdown-item menu-item-collapse " href="">Buku Saya</a>
+              <a class="dropdown-item menu-item-collapse " href="">Pengaturan</a>
+              <a class="dropdown-item menu-item-collapse " href="{{route('logout.post')}}">Keluar</a>
+            </div>
           </div>
-          <div class="my-auto pt-1">
-            <a href="/login" class="btn btn-success">Get Started</a>
-          </div>
+
         </div>
       </div>
-      <a class="dropdown-item menu-item-collapse " href=""><span>Home</span></a>
-      <a class="dropdown-item menu-item-collapse " href=""><span>News</span></a>
-      <a class="dropdown-item menu-item-collapse " href=""><span>Contact</span></a>
+
+      <div class="mt-3">
+        <a class="dropdown-item menu-item-collapse " href=""> Upload</a>
+        <a class="dropdown-item menu-item-collapse " href=""> Home</a>
+        <a class="dropdown-item menu-item-collapse " href=""> News</a>
+        <a class="dropdown-item menu-item-collapse " href=""> Contact</a>
+      </div>
+
+
       <div class="fixed-bottom" style="padding-bottom: 30px !important;">
         <small style="margin-left: 17px;" class="text-muted">&copy Rumah Pustaka</small>
       </div>
+
+
     </div>
   </div>
 </div>

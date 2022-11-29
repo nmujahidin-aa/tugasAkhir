@@ -34,8 +34,7 @@ h6,
 }
 
 /*--------------------------------------------------------------
-<<<<<<< HEAD
-=======
+
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -69,8 +68,7 @@ h6,
 }
 
 /*--------------------------------------------------------------
->>>>>>> 29de086fff93af03fb30c52b3633c84b6927167e
-# Disable aos animation delay on mobile devices
+
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
     [data-aos-delay] {
@@ -90,19 +88,13 @@ h6,
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-<<<<<<< HEAD
+
   width: 100%;
   height: 70vh;
   background: #ebefee;
   border-bottom: 2px solid #ebefee;
   margin: 65px 0 -72px 0;
-=======
-    width: 100%;
-    height: 70vh;
-    background: #ebefee;
-    border-bottom: 2px solid #ebefee;
-    margin: 72px 0 -72px 0;
->>>>>>> 29de086fff93af03fb30c52b3633c84b6927167e
+
 }
 
 #hero h1 {

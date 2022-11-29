@@ -5,10 +5,10 @@
 
 	<div class="row">
 		<!-- Bagian Kiri Start -->
-		<div class="col-7">
+		<div class="col-lg-7 col-md-12">
 			
 			<div class="row d-flex justify-content-end mt-5">
-				<div class="col-9">
+				<div class="col-lg-9 col-md-12">
 					<div class="card">
 						<div class="card-body">
 							
@@ -33,10 +33,10 @@
 
 
 		<!-- Bagian Kanan Start -->
-		<div class="col-5">
+		<div class="col-lg-5 col-md-12">
 			
 			<div class="row d-flex justify-content-start mt-5">
-				<div class="col-8">
+				<div class="col-lg-8 col-md-12">
 					<div class="card">
 						<div class="card-body">
 							

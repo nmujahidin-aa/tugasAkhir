@@ -25,7 +25,7 @@ class PustakaController extends Controller
             'table' => $table
         ];
 
-        return view('users.index',$data);
+        return view('users.create',$data);
     }
 
     public function edit($id)

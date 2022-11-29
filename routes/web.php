@@ -28,16 +28,16 @@ Route::get('/login', [LoginController::class, 'index'])->name("login.index");
 Route::post('/login', [LoginController::class, 'login'])->name("login.post");
 
 
-Route::get('/logout', [UsersController::class, 'logout'])->name("logout.post");
+Route::get('/logout', [LogoutController::class, 'logout'])->name("logout.post");
 
 Route::get('/register', [RegisterController::class, 'index'])->name("register.index");
 Route::post('/register', [RegisterController::class, 'register'])->name("register.post");
 
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
-	Route::get('/create',[PustakaController::class, 'index'])->name("create.index");
 
 		Route::group(["as" => "pustaka." , "prefix" => "pustaka"],function(){
+			Route::get('/create',[PustakaController::class, 'index'])->name("create");
 			Route::get('/{pustaka}/edit',[PustakaController::class, 'edit'])->name("edit");
 			Route::post('/',[PustakaController::class, 'store'])->name("store");
 			Route::put('/{pustaka}',[PustakaController::class, 'update'])->name("update");
@@ -48,4 +48,3 @@ Route::group(['middleware' => ['auth']], function () {
 Route::get('/admin/dashboard', function () {
 	return view('admin.exdashboard');
 })->name("exdashboard");
-
