@@ -21,8 +21,8 @@ use App\Enums\RoleEnum;
 
 Route::get('/', [UsersController::class, 'index'])->name("landing-page.index");
 
-Route::get('/login', [LoginController::class,'index'])->name("login.index");
-Route::post('/login',[LoginController::class,'login'])->name("login.post");
+Route::get('/login', [LoginController::class, 'index'])->name("login.index");
+Route::post('/login', [LoginController::class, 'login'])->name("login.post");
 
 Route::get('/login', [LoginController::class, 'index'])->name("login.index");
 Route::post('/login', [LoginController::class, 'login'])->name("login.post");
@@ -41,6 +41,14 @@ Route::group(['middleware' => ['auth']], function () {
 		Route::get('/profile',[UsersController::class, 'profile'])->name("profile");
 		Route::get('/book',[UsersController::class, 'book'])->name("book");
 		Route::post('/profile_update',[UsersController::class, 'profile_update'])->name("profile_update");
+	Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
+	Route::get('/create', [PustakaController::class, 'index'])->name("create.index");
+
+	Route::group(["as" => "pustaka.", "prefix" => "pustaka"], function () {
+		Route::get('/{pustaka}/edit', [PustakaController::class, 'edit'])->name("edit");
+		Route::post('/', [PustakaController::class, 'store'])->name("store");
+		Route::put('/{pustaka}', [PustakaController::class, 'update'])->name("update");
+		Route::delete('/{pustaka}', [PustakaController::class, 'destroy'])->name("destroy");
 	});
 
 
@@ -62,4 +70,3 @@ Route::group(['middleware' => ['auth']], function () {
 	});
 
 });
-
