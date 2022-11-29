@@ -134,6 +134,8 @@ class PustakaController extends Controller
         }
     }
 
+
+    // Hapus
     public function destroy($id)
     {
         try {

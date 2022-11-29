@@ -4,7 +4,7 @@
       <i class="bx bx-menu"></i>
     </div>
     <a class="navbar-brand logo-light" href="">
-      <img src="image/logo.png" alt="Rumah Pustaka" height="40px">
+      <img src="{{URL::to('/')}}/image/logo.png" alt="Rumah Pustaka" height="40px">
     </a>
     <div class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation" style="border-color: transparent;">
       <i class="bx bx-search"></i>
@@ -22,13 +22,13 @@
       </div>
       <ul id="navbar-menu" class="navbar-nav my-2 me-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('homepage.index')}} ">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">News</a>
+          <a class="nav-link active" aria-current="page" href=" ">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="">Contact</a>
+          <a class="nav-link active" aria-current="page" href="{{route('contact.index')}} ">Contact</a>
         </li>
       </ul>
       <div class=" ms-auto mx-2">
@@ -40,12 +40,11 @@
 
       <div class="mx-2 dropdown">
         <a class="" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: transparent;">
-          <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 6vh;">
+          <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 6vh;">
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="#">Profil Saya</a></li>
-          <li><a class="dropdown-item" href="#">Buku Saya</a></li>
-          <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+          <li><a class="dropdown-item" href="{{route('user.profile')}} ">Profil Saya</a></li>
+          <li><a class="dropdown-item" href="{{route('user.book')}} ">Buku Saya</a></li>
           <hr>
           <li><a class="dropdown-item" href="{{route('logout.post')}} ">Keluar</a></li>
         </ul>
@@ -53,7 +52,9 @@
       
       <ul id="navbar-menu" class="navbar-nav my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
+          @if(!request()->routeIs('pustaka.create'))
           <a href="{{route('pustaka.create')}} " class="btn btn-primary px-3" style="border-radius: 50px;"> Upload </a>
+          @endif
         </li>
       </ul>
     </div>
@@ -88,7 +89,7 @@
 <div class="offcanvas offcanvas-start dark-bg" tabindex="-1" id="menu-mobile" aria-labelledby="menu-mobileLabel">
   <div class="offcanvas-header" style="margin-bottom: -30px;">
     <h5 class="offcanvas-title" id="menu-mobileLabel">
-      <img src="/image/logo.png" height="30" alt="Rupus">
+      <img src="{{URL::to('/')}}/image/logo.png" height="30" alt="Rupus">
     </h5>
     <button style="margin-top: 4px;" type="button" class="btn navbar-toggler" data-bs-dismiss="offcanvas" aria-label="Close">
       <i class="bx bx-x"></i>
@@ -105,7 +106,7 @@
           
           <nav class="navbar">
             <div class="container-fluid">
-              <img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
+              <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 7vh;">
               <div class="bx bx-chevron-down fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
               </div>
             </div>
@@ -113,9 +114,8 @@
           <div class="collapse" id="navbarToggleExternalContent">
             <div class="">
               <hr>
-              <a class="dropdown-item menu-item-collapse " href="">Profil Saya</a>
-              <a class="dropdown-item menu-item-collapse " href="">Buku Saya</a>
-              <a class="dropdown-item menu-item-collapse " href="">Pengaturan</a>
+              <a class="dropdown-item menu-item-collapse " href="{{route('user.profile')}} ">Profil Saya</a>
+              <a class="dropdown-item menu-item-collapse " href="{{route('user.book')}} ">Buku Saya</a>
               <a class="dropdown-item menu-item-collapse " href="{{route('logout.post')}}">Keluar</a>
             </div>
           </div>
@@ -124,7 +124,9 @@
       </div>
 
       <div class="mt-3">
-        <a class="dropdown-item menu-item-collapse " href=""> Upload</a>
+        @if(!request()->routeIs('pustaka.create'))
+        <a class="dropdown-item menu-item-collapse " href="{{route('pustaka.create')}}"> Upload</a>
+        @endif
         <a class="dropdown-item menu-item-collapse " href=""> Home</a>
         <a class="dropdown-item menu-item-collapse " href=""> News</a>
         <a class="dropdown-item menu-item-collapse " href=""> Contact</a>

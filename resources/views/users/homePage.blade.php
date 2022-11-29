@@ -1,4 +1,5 @@
 @extends('layout.HomePage.master')
+@section('title', 'Homepage')
 @section('content')
 
 <div style="margin-top: 65px;">
