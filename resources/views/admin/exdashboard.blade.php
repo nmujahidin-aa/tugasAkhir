@@ -1,7 +1,7 @@
 @extends('admin.masteradmin')
 @section('content')
 <div class="container-fluid p-0">
-    {{-- <h1 class="h3 mb-3">
+    <h1 class="h3 mb-3">
         <strong>Analytics</strong> Dashboard
     </h1>
 
@@ -529,7 +529,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
 
     <h1>Test Bagian Dashboard</h1>
 </div>

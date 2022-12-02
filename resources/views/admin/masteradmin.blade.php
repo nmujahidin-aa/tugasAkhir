@@ -22,7 +22,7 @@
                                         class="text-muted"
                                         href="https://adminkit.io/"
                                         target="_blank"
-                                        ><strong>AdminKit</strong></a
+                                        ><strong>Rumah Pustaka</strong></a
                                     >
                                     -
                                     <a
@@ -30,7 +30,7 @@
                                         href="https://adminkit.io/"
                                         target="_blank"
                                         ><strong
-                                            >Bootstrap Admin Template</strong
+                                            >Melihat Dunia Dalam Satu Kali Tekan</strong
                                         ></a
                                     >
                                     &copy;

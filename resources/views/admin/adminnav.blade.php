@@ -3,7 +3,7 @@
 <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="index.html">
-  <span class="align-middle">AdminKit</span>
+  <span class="align-middle">Rumah Pustaka</span>
 </a>
 
         <ul class="sidebar-nav">
@@ -18,27 +18,27 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-profile.html">
-      <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
+                <a class="sidebar-link" href="">
+      <i class="align-middle" data-feather="user"></i> <span class="align-middle">Userlist</span>
     </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-in.html">
-      <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+                <a class="sidebar-link" href="">
+      <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Books</span>
     </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-sign-up.html">
-      <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
-    </a>
-            </li>
+                <a class="sidebar-link" href="">
+      <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">About me</span>
+    {{-- </a> --}}
+            {{-- </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="pages-blank.html">
-      <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-    </a>
+      <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span> --}}
+    {{-- </a>
             </li>
 
             <li class="sidebar-header">
@@ -48,13 +48,13 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="ui-buttons.html">
       <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
-    </a>
-            </li>
+    </a> --}}
+            {{-- </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="ui-forms.html">
-      <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
-    </a>
+      <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span> --}}
+    {{-- </a>
             </li>
 
             <li class="sidebar-item">
@@ -72,8 +72,8 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="icons-feather.html">
       <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-    </a>
-            </li>
+    </a> --}}
+            {{-- </li>
 
             <li class="sidebar-header">
                 Plugins & Addons
@@ -82,12 +82,12 @@
             <li class="sidebar-item">
                 <a class="sidebar-link" href="charts-chartjs.html">
       <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
-    </a>
-            </li>
+    </a> --}}
+            {{-- </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="maps-google.html">
-      <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+      <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span> --}}
     </a>
             </li>
         </ul>
