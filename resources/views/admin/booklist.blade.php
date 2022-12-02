@@ -11,26 +11,10 @@
                     <thead>
                         <tr>
                             <th>Judul Buku</th>
-                            <th
-                                class="d-none d-xl-table-cell"
-                            >
-                                Author
-                            </th>
-                            <th
-                                class="d-none d-xl-table-cell"
-                            >
-                                Tanggal diunggah
-                            </th>
-                            <th
-                                class="d-none d-md-table-cell"
-                            >
-                                Jenis
-                            </th>
-                            <th
-                                class="d-none d-md-table-cell"
-                            >
-                                Kategori
-                            </th>
+                            <th class="d-none d-xl-table-cell">Author</th>
+                            <th class="d-none d-xl-table-cell">Tanggal diunggah</th>
+                            <th class="d-none d-md-table-cell">Jenis</th>
+                            <th class="d-none d-md-table-cell">Kategori </th>
                         </tr>
                     </thead>
                     <tbody>

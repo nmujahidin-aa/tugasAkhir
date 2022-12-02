@@ -11,6 +11,7 @@ use App\Helpers\UploadHelper;
 use App\Helpers\SlugHelper;
 use App\Enums\RoleEnum;
 use App\Enums\BookEnum;
+use App\Models\Category;
 use App\Models\Book;
 use Auth;
 use Error;
@@ -21,8 +22,12 @@ class PustakaController extends Controller
     {
         $table = Book::paginate(10);
 
+        $categories = new Category();
+        $categories = $categories->get();
+
         $data = [
-            'table' => $table
+            'table' => $table,
+            'categories' => $categories,
         ];
 
         return view('users.create',$data);
@@ -33,8 +38,12 @@ class PustakaController extends Controller
         $result = Book::where('id',$id);
         $result = $result->first();
 
+        $categories = new Category();
+        $categories = $categories->get();
+
         $data = [
-            'result' => $result
+            'result' => $result,
+            'categories' => $categories,
         ];
 
         return view('users.edit',$data);

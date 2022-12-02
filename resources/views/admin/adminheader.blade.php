@@ -313,46 +313,15 @@
                     data-bs-toggle="dropdown"
                 >
                     <img
-                        src="{{asset('foradmin/img/avatars/avatar.jpg')}}"
+                        src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif"
                         class="avatar img-fluid rounded me-1"
                         alt="Charles Hall"
                     />
-                    <span class="text-dark">Charles Hall</span>
+                    <span class="text-dark">{{Auth::user()->name}}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                    <a
-                        class="dropdown-item"
-                        href="pages-profile.html"
-                        ><i
-                            class="align-middle me-1"
-                            data-feather="user"
-                        ></i>
-                        Profile</a
-                    >
-                    <a class="dropdown-item" href="#"
-                        ><i
-                            class="align-middle me-1"
-                            data-feather="pie-chart"
-                        ></i>
-                        Analytics</a
-                    >
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="index.html"
-                        ><i
-                            class="align-middle me-1"
-                            data-feather="settings"
-                        ></i>
-                        Settings & Privacy</a
-                    >
-                    <a class="dropdown-item" href="#"
-                        ><i
-                            class="align-middle me-1"
-                            data-feather="help-circle"
-                        ></i>
-                        Help Center</a
-                    >
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" href="{{route('logout.post')}}"
                         >Log out</a
                     >
                 </div>

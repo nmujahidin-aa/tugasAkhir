@@ -10,6 +10,9 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'category_id' => [
+                'required',
+            ],
             'title' => [
                 'required',
             ],
@@ -33,6 +36,7 @@ class UpdateRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'category_id.required'     => 'Kategori harus diisi',
             'title.required'     => 'Judul harus diisi',
             'description.required'     => 'Deskripsi harus diisi',
             'author.required'     => 'Nama penulis harus diisi',
@@ -52,7 +56,13 @@ class UpdateRequest extends FormRequest
         if (! $this->wantsJson()) {
             $errors = implode('<br>', $validator->errors()->all());
             alert()->html('Gagal',$errors,'error');
-            $this->redirect = route("pustaka.edit",request()->route()->parameter("pustaka"));
+            if(request()->routeIs("dashboard.books.update")){
+                $this->redirect = route("dashboard.books.edit",request()->route()->parameter("id"));
+            }
+            else{
+                $this->redirect = route("pustaka.edit",request()->route()->parameter("pustaka"));
+            }
+            
         }
         parent::failedValidation($validator);
     }

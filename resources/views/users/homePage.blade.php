@@ -2,83 +2,45 @@
 @section('title', 'Homepage')
 @section('content')
 
-<div style="margin-top: 65px; margin-bottom: 100px;">
-	<div class="row">
-		<!-- Bagian Kiri Start -->
-		<div class="col-lg-7 col-md-7">
-			<div class="row d-flex justify-content-end mt-5">
-				<div class="col-lg-9 col-md-12">
-					<div class="card">
-						<div class="card-body">
-							<!-- Isi -->
-							<div class="row">
-								<div class="col-1">
-									<img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
-								</div>
-								<div class="col-11">
-									<p class="text-start mx-2">Nur Mujahidin Achmad Akbar</p>
-									<p class="text-start mx-2">Author 1</p>
-								</div>
-								<div class="card-body">
-                        			<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
-			                        <p class="card-text">
-			                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-			                            sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-			                        </p>
-                    		</div>
-	                    <div class="card-footer">
-	                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
-	                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
-	                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
-		                </div>
-                	</div>
-				</div>
-			</div>
-		</div>
-		<!-- Bagian Kiri End -->
-	</div>
-                        				<p class="card-text">
-                            				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-                            				sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                        				</p>
-                    				</div>
-                    				<div class="card-footer">
-                        				<a href="#" class="card-link" style="text-decoration: none;"><i class="fa fa-download"></i> Download</a>
-                    				</div>
-                				</div>
+<div class="container">
+	<div style="margin-top: 65px;">
+		<div class="row">
+			<div class="col-8">
+				<div class="card" style="margin-top: 10px; margin-bottom: 200px;">
+					<div class="card-body">
+						
+						<div class="row">
+							<div class="col-2">
+								<img src="images/logo.png">
+							</div>
+							<div class="col-10">
+								<p>Nur Mujahidin AA</p>
+								<a href="" style="margin-top: -30px;">email@email.com</a>
 							</div>
 						</div>
+						<div><strong>Title</strong></div>
+						<div>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodot nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+
+						<div>
+							<a href="" class="me-3"><i class="fa fa-eye"></i></a>
+							<a href="" class="mx-3"><i class="fa fa-share"></i></a>
+							<a href="" class="mx-3"><i class="fa fa-download"></i></a>
+							<p class="text-muted text-right">category</p>
+						</div>
+
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-lg-7 col-md-7">
-			<div class="row d-flex justify-content-end mt-5">
-				<div class="col-lg-9 col-md-12">
-					<div class="card">
-						<div class="card-body">
-							<!-- Isi -->
-							<div class="row">
-								<div class="col-1">
-									<img src="image/team/team-1.jpg" class="rounded-circle" style="height: 7vh;">
-								</div>
-								<div class="col-11">
-									<p class="text-start mx-2">Author 2</p>
-								</div>
-								<div class="card-body">
-                        			<div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>10 min ago</div>
-                        				<p class="card-text">
-                            				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo recusandae nulla rem eos ipsa praesentium esse magnam nemo dolor
-                            				sequi fuga quia quaerat cum, obcaecati hic, molestias minima iste voluptates.
-                        				</p>
-                    				</div>
-                    				<div class="card-footer">
-                        				<a href="#" class="card-link" style="text-decoration: none;"><i class="fa fa-download"></i> Download</a>
-                    				</div>
-                				</div>
-							</div>
-						</div>
-					</div>
+
+
+			<div class="col-4">
+				<div class="card" style="margin-top: 10px;">
+					<div class="card-body"></div>
 				</div>
 			</div>
 		</div>

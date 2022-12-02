@@ -39,6 +39,13 @@ class LoginController extends Controller
                     Auth::logout();
                     throw new Error("Anda tidak diperbolehkan mengakses menu ini");
                 }
+
+                if(Auth::user()->hasRole([
+                    RoleEnum::ADMINISTRATOR
+                ])){
+                    alert()->html('Berhasil','Login berhasil','success'); 
+                    return redirect()->intended(route('exdashboard'));
+                }
             }
             else{
                 throw new Error("Username / password tidak sesuai");

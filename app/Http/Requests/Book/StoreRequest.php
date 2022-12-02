@@ -10,6 +10,9 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'category_id' => [
+                'required',
+            ],
             'title' => [
                 'required',
             ],
@@ -33,6 +36,7 @@ class StoreRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'category_id.required'     => 'Kategori harus diisi',
             'title.required'     => 'Judul harus diisi',
             'description.required'     => 'Deskripsi harus diisi',
             'author.required'     => 'Nama penulis harus diisi',
@@ -53,7 +57,12 @@ class StoreRequest extends FormRequest
         if (! $this->wantsJson()) {
             $errors = implode('<br>', $validator->errors()->all());
             alert()->html('Gagal',$errors,'error');
-            $this->redirect = route("create.index");
+            if(request()->routeIs("dashboard.books.store")){
+                $this->redirect = route("dashboard.books.index");
+            }
+            else{
+                $this->redirect = route("create.index");
+            }
         }
         parent::failedValidation($validator);
     }

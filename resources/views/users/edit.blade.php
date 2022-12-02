@@ -37,7 +37,15 @@
 									<label><strong>Date</strong> </label>
 									<input type="date" value="{{$result->published_at}}" name="published_at" class="form-control">
 								</div>
-
+								<div class="my-3">
+									<label><strong>Kategori</strong></label>
+									<select class="form-control" name="category_id">
+										<option value="">Pilih Kategori</option>
+										@foreach($categories as $index => $row)
+										<option value="{{$row->id}}" @if($row->id == $result->category_id) selected @endif>{{$row->name}}</option>
+										@endforeach
+									</select>
+								</div>
 								<div class="d-flex justify-content-end">
 									<button class="btn btn-primary"><i class="bx bx-upload mx-2"></i>Upload</button>
 								</div>
