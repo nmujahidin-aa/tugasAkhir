@@ -34,34 +34,39 @@ Route::get('/register', [RegisterController::class, 'index'])->name("register.in
 Route::post('/register', [RegisterController::class, 'register'])->name("register.post");
 
 Route::group(['middleware' => ['auth']], function () {
-	Route::get('/home',[UsersController::class,'home'])->name("homepage.index");
-	Route::get('/contact',[UsersController::class,'contact'])->name("contact.index");
+	Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
+	Route::get('/contact', [UsersController::class, 'contact'])->name("contact.index");
 
 
 	// PREFIX USER
-	Route::group(["as" => "user." , "prefix" => "user"],function(){
-		Route::get('/profile',[UsersController::class, 'profile'])->name("profile");
-		Route::get('/book',[UsersController::class, 'book'])->name("book");
-		Route::post('/profile_update',[UsersController::class, 'profile_update'])->name("profile_update");
+	Route::group(["as" => "user.", "prefix" => "user"], function () {
+		Route::get('/profile', [UsersController::class, 'profile'])->name("profile");
+		Route::get('/book', [UsersController::class, 'book'])->name("book");
+		Route::post('/profile_update', [UsersController::class, 'profile_update'])->name("profile_update");
 		Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
 		Route::get('/create', [PustakaController::class, 'index'])->name("create.index");
 	});
 
-	Route::group(["as" => "pustaka." , "prefix" => "pustaka"],function(){
-		Route::get('/create',[PustakaController::class, 'index'])->name("create");
-		Route::get('/{pustaka}/edit',[PustakaController::class, 'edit'])->name("edit");
-		Route::post('/',[PustakaController::class, 'store'])->name("store");
-		Route::put('/{pustaka}',[PustakaController::class, 'update'])->name("update");
-		Route::delete('/{pustaka}',[PustakaController::class, 'destroy'])->name("destroy");
+	Route::group(["as" => "pustaka.", "prefix" => "pustaka"], function () {
+		Route::get('/create', [PustakaController::class, 'index'])->name("create");
+		Route::get('/{pustaka}/edit', [PustakaController::class, 'edit'])->name("edit");
+		Route::post('/', [PustakaController::class, 'store'])->name("store");
+		Route::put('/{pustaka}', [PustakaController::class, 'update'])->name("update");
+		Route::delete('/{pustaka}', [PustakaController::class, 'destroy'])->name("destroy");
 	});
 
 	// Route User End
 	// Route Admin Start
 
-	Route::group(["middleware" => ['role:' . implode('|', [RoleEnum::ADMINISTRATOR])]] , function(){
+	Route::group(["middleware" => ['role:' . implode('|', [RoleEnum::ADMINISTRATOR])]], function () {
 		Route::get('/admin/dashboard', function () {
 			return view('admin.exdashboard');
 		})->name("exdashboard");
+		Route::get('/admin/userlist', function () {
+			return view('admin.userlist');
+		})->name("userlist");
+		Route::get('/admin/booklist', function () {
+			return view('admin.booklist');
+		})->name("booklist");
 	});
-
 });

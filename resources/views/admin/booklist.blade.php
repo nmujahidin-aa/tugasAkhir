@@ -2,7 +2,7 @@
 @section('content')
 <div class="container-fluid p-0">
     <h1 class="h3 mb-3">
-        <strong>User</strong> Terdaftar
+        <strong>Buku</strong> Terdaftar
     </h1>
 
     <div class="row">
@@ -11,26 +11,26 @@
                 <table class="table table-hover my-0">
                     <thead>
                         <tr>
-                            <th>Nama Pengguna</th>
+                            <th>Judul Buku</th>
                             <th
                                 class="d-none d-xl-table-cell"
                             >
-                                Email
+                                Author
                             </th>
                             <th
                                 class="d-none d-xl-table-cell"
                             >
-                                Tanggal Registrasi
+                                Tanggal diunggah
                             </th>
                             <th
                                 class="d-none d-md-table-cell"
                             >
-                                Jumlah Buku Diunggah
+                                Jenis
                             </th>
                             <th
                                 class="d-none d-md-table-cell"
                             >
-                                Status
+                                Kategori
                             </th>
                         </tr>
                     </thead>

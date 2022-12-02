@@ -11,20 +11,20 @@
                 Pages
             </li>
 
-            <li class="sidebar-item active">
-                <a class="sidebar-link" href="index.html">
+            <li class="sidebar-item @if(request()->routeIs('exdashboard')) active @endif">
+                <a class="sidebar-link" href="{{route('exdashboard')}}">
       <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
     </a>
             </li>
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="">
+            <li class="sidebar-item @if(request()->routeIs('userlist')) active @endif">
+                <a class="sidebar-link" href="{{route('userlist')}}">
       <i class="align-middle" data-feather="user"></i> <span class="align-middle">Userlist</span>
     </a>
             </li>
 
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="">
+            <li class="sidebar-item @if(request()->routeIs('booklist')) active @endif">
+                <a class="sidebar-link" href="{{route('booklist')}}">
       <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Books</span>
     </a>
             </li>
