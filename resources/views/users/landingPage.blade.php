@@ -122,8 +122,8 @@
   <div class="container">
 
     <div class="section-title" data-aos="fade-up">
-      <h2>Team</h2>
-      <p>Kami di sini siap untuk membantu anda</p>
+      <h2>Testimoni</h2>
+      <p>Pendapat dari pengguna kami</p>
     </div>
 
     <div class="tim">

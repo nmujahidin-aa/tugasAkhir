@@ -44,8 +44,6 @@ class RegisterController extends Controller
             alert()->html('Gagal',$e->getMessage(),'error');
             return redirect()->route('register.index')->withInput();
         }
-
-
         
     }
 }
