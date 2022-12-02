@@ -9,6 +9,7 @@
     <div class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch" aria-expanded="false" aria-label="Toggle navigation" style="border-color: transparent;">
       <i class="bx bx-search"></i>
     </div>
+
     <div class="collapse navbar-collapse" id="navbarScroll">
       <div class="container" id="search-bar" style="display: none;">
         <div class="row height d-flex">
@@ -22,13 +23,13 @@
       </div>
       <ul id="navbar-menu" class="navbar-nav my-2 me-5 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('homepage.index')}} ">Home</a>
+          <a class="nav-link @if(request()->routeIs('homepage.index')) active @endif" aria-current="page" href="{{route('homepage.index')}} ">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href=" ">News</a>
+          <a class="nav-link" aria-current="page" href=" ">News</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{route('contact.index')}} ">Contact</a>
+          <a class="nav-link @if(request()->routeIs('contact.index')) active @endif" aria-current="page" href="{{route('contact.index')}} ">Contact</a>
         </li>
       </ul>
       <div class=" ms-auto mx-2">
