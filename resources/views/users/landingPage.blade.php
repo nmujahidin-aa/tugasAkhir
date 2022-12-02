@@ -9,7 +9,7 @@
         <h1>Melihat Dunia, dalam Satu Kali Tekan</h1>
         <h2>Apa yang kamu cari? Semua ada disini, dan dapatkan secara <b>FREE</b></h2>
         <div>
-          <a href="/register" class="btn-get-started scrollto text-decoration-none"><b>Get Started</b></a>
+          <a href="/register" class="btn-get-started scrollto text-decoration-none"><b>Daftar</b></a>
         </div>
       </div>
       <div class="col-lg-6 order-1 order-lg-2 hero-img">

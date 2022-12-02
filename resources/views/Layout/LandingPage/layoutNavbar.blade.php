@@ -5,8 +5,8 @@
     </a>
     <div class="justify-content-end">
       
-    	<a href="/login" class="text-decoration-none nav-link-active text-dark mx-3" ><strong>Login</strong></a>
-    	<a href="/register" class="btn btn-primary nav-link-active text-white px-4" style="background: #40ba9b;"><strong>Join for free</strong></a>
+    	<a href="/login" class="text-decoration-none nav-link-active text-dark mx-3" ><strong>Masuk</strong></a>
+    	<a href="/register" class="btn btn-success nav-link-active text-white px-4"><strong>Daftar</strong></a>
         
     </div>
   </div>
