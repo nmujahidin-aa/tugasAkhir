@@ -1,7 +1,7 @@
 @extends('admin.masteradmin')
 @section('content')
 
-<div class="container-fluid p-0">
+<div class="container p-0">
     <h1 class="h3 mb-3">
         <strong>Buku </strong> Terupload
     </h1>
@@ -13,7 +13,7 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex">
-            <div class="card flex-fill">
+            <div class="card flex-fill container py-3">
                 <div class="table-responsive">
                     <table class="table table-hover my-0" id="datatable">
                         <thead>
@@ -26,7 +26,7 @@
                                 <th class="d-none d-xl-table-cell">Slug</th>
                                 <th class="d-none d-xl-table-cell">Tanggal Publikasi</th>
                                 <th class="d-none d-xl-table-cell">Dibuat Oleh</th>
-                                <th class="d-none d-xl-table-cell">Aksi</th>
+                                <th class="d-none d-xl-table-cell" style="min-inline-size: 100px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -34,7 +34,7 @@
                             <tr>
                                 <td>{{$row->category->name ?? ""}}</td>
                                 <td>
-                                	<a href="{{asset('storage/'.$row->file)}}" class="btn btn-success btn-sm">Lihat File</a>
+                                	<a href="{{asset('storage/'.$row->file)}}" class="btn btn-success btn-sm" style="font-size: 9px;">Lihat File</a>
                                 </td>
                                 <td>{{$row->title}}</td>
                                 <td>{{$row->author}}</td>
@@ -43,9 +43,9 @@
                                 <td>{{date('d-m-Y',strtotime($row->published_at))}}</td>
                                 <td>{{$row->user->name ?? null}}</td>
                                 <td>
-                                    <a href="{{route('dashboard.books.show',$row->id)}}" class="btn btn-warning"><i class="fa fa-eye"></i></a>
-                                    <a href="{{route('dashboard.books.edit',$row->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i></a>
+                                    <a href="{{route('dashboard.books.show',$row->id)}}" class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
+                                    <a href="{{route('dashboard.books.edit',$row->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
+                                    <a href="#" class="btn btn-sm btn-danger btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach

@@ -19,7 +19,7 @@ use Auth;
 class DashboardController extends Controller
 {
     public function __construct(){
-        $this->view = "Admin.exdashboard";
+        $this->view = "Admin.dashboard.dashboard";
         $this->book = new Book();
         $this->category = new Category();
         $this->user = new User();

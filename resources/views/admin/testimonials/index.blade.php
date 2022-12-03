@@ -1,6 +1,6 @@
 @extends('admin.masteradmin')
 @section('content')
-<div class="container-fluid p-0">
+<div class="container p-0">
     <h1 class="h3 mb-3">
         <strong>Testimoni</strong>
     </h1>
@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-12 d-flex">
-            <div class="card flex-fill">
+            <div class="card flex-fill container py-3">
                 <div class="table-responsive">
                     <table class="table table-hover my-0" id="datatable">
                         <thead>
@@ -27,14 +27,14 @@
                             @foreach($table as $index => $row)
                             <tr>
                                 <td>
-                                    <img src="{{asset('storage/'.$row->foto)}}" style="width:80px;height:80px;">
+                                    <img src="{{asset('storage/'.$row->foto)}}" class="rounded-circle" style="width:50px;height:50px;">
                                 </td>
                                 <td>{{$row->name}}</td>
                                 <td>{{$row->description}}</td>
                                 <td>
-                                    <a href="{{route('dashboard.testimonials.show',$row->id)}}" class="btn btn-warning"><i class="fa fa-eye"></i></a>
-                                    <a href="{{route('dashboard.testimonials.edit',$row->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i></a> 
+                                    <a href="{{route('dashboard.testimonials.show',$row->id)}}" class="btn btn-sm btn-warning"><i class="fa fa-eye"></i></a>
+                                    <a href="{{route('dashboard.testimonials.edit',$row->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
+                                    <a href="#" class="btn btn-sm btn-danger btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i></a> 
                                 </td>
                             </tr>
                             @endforeach

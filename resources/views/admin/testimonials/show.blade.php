@@ -12,7 +12,7 @@
 				@csrf
 				@method("PUT")
 					<div class="text-center">
-						<img src="{{asset('storage/'.$result->foto)}}" style="width:100px;height: 100px;">
+						<img src="{{asset('storage/'.$result->foto)}}" class="rounded-circle" style="width:150px;height: 150px;">
 					</div>
 					<div>
 						<label>Nama</label>
