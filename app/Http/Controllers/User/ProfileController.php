@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
@@ -14,37 +15,10 @@ use App\Helpers\UploadHelper;
 use Auth;
 use Error;
 
-class UsersController extends Controller
+class ProfileController extends Controller
 {
+
     public function index()
-    {
-        return view('users.landingPage');
-    }
-
-    public function home()
-    {
-        return view('users.homePage');
-    }
-
-    public function contact()
-    {
-        return view('users.contact');
-    }
-
-    public function book()
-    {
-        $table = new Book();
-        $table = $table->where("user_id",Auth::user()->id);
-        $table = $table->paginate(10);
-
-        $data = [
-            'table' => $table
-        ];
-
-        return view('users.book',$data);
-    }
-
-       public function profile()
     {
         $result = Auth::user();
 
@@ -52,10 +26,21 @@ class UsersController extends Controller
             'result' => $result
         ];
 
-        return view('users.profile',$data);
+        return view('users.profile.index',$data);
     }
 
-    public function profile_update(UpdateRequest $request)
+    public function edit()
+    {
+        $result = Auth::user();
+
+        $data = [
+            'result' => $result
+        ];
+
+        return view('users.profile.edit',$data);
+    }
+
+    public function update(UpdateRequest $request)
         {
             try {
                 $result = Auth::user();
@@ -95,13 +80,13 @@ class UsersController extends Controller
                 ]);
 
                 alert()->html('Berhasil','Data berhasil diubah','success'); 
-                return redirect()->route('user.profile');
+                return redirect()->route('user.profile.index');
 
             } catch (\Throwable $e) {
                 Log::emergency($e->getMessage());
 
-                alert()->error('Gagal',$e->getMessage());
-                return redirect()->route('user.profile')->withInput();
-            }
+            alert()->error('Gagal',$e->getMessage());
+            return redirect()->route('user.profile')->withInput();
         }
+    }
 }

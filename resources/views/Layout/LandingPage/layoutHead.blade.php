@@ -4,7 +4,6 @@
 <title>Rumah Pustaka</title>
 <link rel="icon" href="image/logo.png">
 <link rel="stylesheet" href="{{URL::to('/')}}//assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="{{URL::to('/')}}//assets/css/rumahPustaka.css">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
 <link href="{{URL::to('/')}}/assets/css/style.css" rel="stylesheet">

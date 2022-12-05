@@ -5,7 +5,7 @@
 </head>
 <body>
 	@include('sweetalert::alert')
-	<section class="vh-100">
+	<section class="vh-100" style="background-color: #e9ecef;">
 	  <div class="container-fluid h-custom">
 	    <div class="row d-flex justify-content-center align-items-center h-100">
 	      <div class="col-md-9 col-lg-6 col-xl-5 d-flex justify-content-center">
@@ -20,7 +20,7 @@
 	            <p class="lead fw-normal mb-0 me-3">Rumah Pustaka</p>
 	          </div>
 
-	          <div class="divider d-flex align-items-center my-4">
+	          <div class="divider d-flex align-items-center my-4" >
 	            <p class="text-center fw-bold mx-3 mb-0">Masuk</p>
 	          </div>
 
@@ -46,14 +46,14 @@
 	                Remember me
 	              </label>
 	            </div>
-	            <a href="" class="text-body">Forgot password?</a>
+	            <a href="" class="text-body text-decoration-none">Forgot password?</a>
 	          </div>
 
 	          <div class="text-center text-lg-start mt-4 pt-2">
 	            <button class="btn btn-primary btn-lg"
-	              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+	              style="padding-left: 2.5rem; padding-right: 2.5rem;">Masuk</button>
 	            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="{{route('register.index')}}"
-	                class="link-danger">Register</a></p>
+	                class="link-danger text-decoration-none">Register</a></p>
 	          </div>
 
 	        </form>
@@ -61,10 +61,6 @@
 	    </div>
 	  </div>
 	</section>
-
-
-
-<!-- -====================================- -->
 
 	@include('layout.Login.layoutScript')
 </body>

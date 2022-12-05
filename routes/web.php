@@ -1,10 +1,14 @@
 <?php
 
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\PustakaController;
+use App\Http\Controllers\User\UsersController;
+
+use App\Http\Controllers\User\PustakaController;
+use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\ContactController;
+use App\Http\Controllers\User\ProfileController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
@@ -24,36 +28,39 @@ Route::get('/', [UsersController::class, 'index'])->name("landing-page.index");
 Route::get('/login', [LoginController::class, 'index'])->name("login.index");
 Route::post('/login', [LoginController::class, 'login'])->name("login.post");
 
-Route::get('/login', [LoginController::class, 'index'])->name("login.index");
-Route::post('/login', [LoginController::class, 'login'])->name("login.post");
-
-
-Route::get('/logout', [LogoutController::class, 'logout'])->name("logout.post");
-
 Route::get('/register', [RegisterController::class, 'index'])->name("register.index");
 Route::post('/register', [RegisterController::class, 'register'])->name("register.post");
 
+Route::get('/logout', [LogoutController::class, 'logout'])->name("logout.post");
+
 Route::group(['middleware' => ['auth']], function () {
-	Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
-	Route::get('/contact', [UsersController::class, 'contact'])->name("contact.index");
+	Route::get('/home', [HomeController::class, 'index'])->name("homepage.index");
+
+	Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
 
 
 	// PREFIX USER
 	Route::group(["as" => "user.", "prefix" => "user"], function () {
-		Route::get('/profile', [UsersController::class, 'profile'])->name("profile");
-		Route::get('/book', [UsersController::class, 'book'])->name("book");
-		Route::post('/profile_update', [UsersController::class, 'profile_update'])->name("profile_update");
-		Route::get('/home', [UsersController::class, 'home'])->name("homepage.index");
-		Route::get('/create', [PustakaController::class, 'index'])->name("create.index");
+
+		Route::group(["as" => "pustaka.", "prefix" => "pustaka"], function () {	
+			Route::get('/', [PustakaController::class, 'index'])->name("index");
+			Route::get('/create', [PustakaController::class, 'create'])->name("create");
+			Route::get('/{pustaka}/edit', [PustakaController::class, 'edit'])->name("edit");
+			Route::post('/', [PustakaController::class, 'store'])->name("store");
+			Route::put('/{pustaka}', [PustakaController::class, 'update'])->name("update");
+			Route::delete('/{pustaka}', [PustakaController::class, 'destroy'])->name("destroy");
+		});
+
+		Route::group(["as" => "profile.", "prefix" => "profile"], function () {	
+			Route::get('/', [ProfileController::class, 'index'])->name("index");
+			Route::get('/edit', [ProfileController::class, 'edit'])->name("edit");
+			Route::put('/', [ProfileController::class, 'update'])->name("update");
+		});
+
+		
 	});
 
-	Route::group(["as" => "pustaka.", "prefix" => "pustaka"], function () {
-		Route::get('/create', [PustakaController::class, 'index'])->name("create");
-		Route::get('/{pustaka}/edit', [PustakaController::class, 'edit'])->name("edit");
-		Route::post('/', [PustakaController::class, 'store'])->name("store");
-		Route::put('/{pustaka}', [PustakaController::class, 'update'])->name("update");
-		Route::delete('/{pustaka}', [PustakaController::class, 'destroy'])->name("destroy");
-	});
+	
 
 	// Route User End
 	// Route Admin Start

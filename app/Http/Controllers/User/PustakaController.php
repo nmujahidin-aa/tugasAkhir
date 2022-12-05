@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Book\StoreRequest;
@@ -18,7 +19,22 @@ use Error;
 
 class PustakaController extends Controller
 {
+
     public function index()
+    {
+        $table = new Book();
+        $table = $table->where("user_id",Auth::user()->id);
+        $table = $table->paginate(10);
+
+        $data = [
+            'table' => $table
+        ];
+
+        return view('users.book.index',$data);
+    }
+
+
+    public function create()
     {
         $table = Book::paginate(10);
 
@@ -30,7 +46,7 @@ class PustakaController extends Controller
             'categories' => $categories,
         ];
 
-        return view('users.create',$data);
+        return view('users.book.create',$data);
     }
 
     public function edit($id)
@@ -46,7 +62,7 @@ class PustakaController extends Controller
             'categories' => $categories,
         ];
 
-        return view('users.edit',$data);
+        return view('users.book.edit',$data);
     }
 
     public function store(StoreRequest $request)

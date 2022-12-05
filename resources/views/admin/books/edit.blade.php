@@ -8,7 +8,7 @@
 			
 			<div class="container-fluid">
 				
-				<form action="{{route('dashboard.books.update',$result->id)}}" method="post" enctype='multipart/form-data'">
+				<form action="{{route('dashboard.books.update',$result->id)}}" method="post" enctype='multipart/form-data'>
 				@csrf
 				@method("PUT")
 					<div class="my-3">

@@ -52,10 +52,10 @@
             </div>
 
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button class="btn btn-primary btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
+              <button class="btn btn-primary btn-lg text-decoration-none"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;">Daftar</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">have an account? 
-              <a href="{{route('login.index')}}" class="link-primary">Login</a></p>
+              <a href="{{route('login.index')}}" class="link-primary text-decoration-none">Masuk</a></p>
             </div>
 
           </form>

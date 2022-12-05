@@ -9,7 +9,7 @@
 
 	@include('layout.Homepage.layoutNavbarHome')
 
-	<div style=" background: #e9ecef;">
+	<div style=" background-color: #e9ecef; margin-top: 65px; margin-bottom: 65px;">
 		@yield('content')
 	</div>
 

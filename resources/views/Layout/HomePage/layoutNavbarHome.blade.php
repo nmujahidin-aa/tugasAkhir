@@ -44,8 +44,8 @@
           <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 6vh;">
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{{route('user.profile')}} ">Profil Saya</a></li>
-          <li><a class="dropdown-item" href="{{route('user.book')}} ">Buku Saya</a></li>
+          <li><a class="dropdown-item" href="{{route('user.profile.index')}} ">Profil Saya</a></li>
+          <li><a class="dropdown-item" href="{{route('user.pustaka.index')}} ">Buku Saya</a></li>
           <hr>
           <li><a class="dropdown-item" href="{{route('logout.post')}} ">Keluar</a></li>
         </ul>
@@ -53,8 +53,8 @@
       
       <ul id="navbar-menu" class="navbar-nav my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          @if(!request()->routeIs('pustaka.create'))
-          <a href="{{route('pustaka.create')}} " class="btn btn-primary px-3" style="border-radius: 50px;"> Upload </a>
+          @if(!request()->routeIs('user.pustaka.create','user.pustaka.edit'))
+          <a href="{{route('user.pustaka.create')}} " class="btn btn-primary px-3" style="border-radius: 50px;"> Upload </a>
           @endif
         </li>
       </ul>
@@ -115,8 +115,8 @@
           <div class="collapse" id="navbarToggleExternalContent">
             <div class="">
               <hr>
-              <a class="dropdown-item menu-item-collapse " href="{{route('user.profile')}} ">Profil Saya</a>
-              <a class="dropdown-item menu-item-collapse " href="{{route('user.book')}} ">Buku Saya</a>
+              <a class="dropdown-item menu-item-collapse " href="{{route('user.profile.index')}} ">Profil Saya</a>
+              <a class="dropdown-item menu-item-collapse " href="{{route('user.pustaka.index')}} ">Buku Saya</a>
               <a class="dropdown-item menu-item-collapse " href="{{route('logout.post')}}">Keluar</a>
             </div>
           </div>
@@ -125,8 +125,8 @@
       </div>
 
       <div class="mt-3">
-        @if(!request()->routeIs('pustaka.create'))
-        <a class="dropdown-item menu-item-collapse " href="{{route('pustaka.create')}}"> Upload</a>
+        @if(!request()->routeIs('user.pustaka.create'))
+        <a class="dropdown-item menu-item-collapse " href="{{route('user.pustaka.create')}}"> Upload</a>
         @endif
         <a class="dropdown-item menu-item-collapse " href=""> Home</a>
         <a class="dropdown-item menu-item-collapse " href=""> News</a>

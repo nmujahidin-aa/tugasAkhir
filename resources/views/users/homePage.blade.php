@@ -5,32 +5,32 @@
 <div class="container">
 	<div style="margin-top: 65px;">
 		<div class="row">
-			<div class="col-8">
+			<div class="col-lg-8 col-md-12">
 				<div class="card" style="margin-top: 10px; margin-bottom: 200px;">
 					<div class="card-body">
 						
-						<div class="row">
-							<div class="col-2">
-								<img src="images/logo.png">
-							</div>
-							<div class="col-10">
-								<p>Nur Mujahidin AA</p>
-								<a href="" style="margin-top: -30px;">email@email.com</a>
-							</div>
-						</div>
-						<div><strong>Title</strong></div>
 						<div>
+							<strong>Title Buku</strong>
+						</div>
+
+						<div class="mt-2">
+							<span class="text-center " style="padding-bottom: 3px; padding-left: 10px; padding-right: 10px; max-width: 15%; background-color: #C5E8E5; font-size: 13px;">category buku</span>
+							<span class="text-muted" style="font-size: 13px;"><i class="bx bx-history"></i> 10 menit lalu</span>
+						</div>
+
+						<div class="mt-4">
+							<p style="font-weight: bold;">Username</p>
+							<span>Description:</span>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodot nulla pariatur. Excepteur sint occaecat cupidatat non
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 
-						<div>
-							<a href="" class="me-3"><i class="fa fa-eye"></i></a>
-							<a href="" class="mx-3"><i class="fa fa-share"></i></a>
-							<a href="" class="mx-3"><i class="fa fa-download"></i></a>
-							<p class="text-muted text-right">category</p>
+						<div class="mt-2">
+							<div class="btn btn-sm btn-outline-success rounded-pill">Donwload</div>
 						</div>
 
 					</div>
@@ -38,7 +38,7 @@
 			</div>
 
 
-			<div class="col-4">
+			<div class="col-lg-4 col-md-12">
 				<div class="card" style="margin-top: 10px;">
 					<div class="card-body"></div>
 				</div>

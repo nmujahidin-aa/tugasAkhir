@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @include('layout.AdminPage.adminhead')
+        @include('admin.layout.head')
     </head>
 
     <body>
