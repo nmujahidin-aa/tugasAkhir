@@ -20,35 +20,6 @@ class ProfileController extends Controller
 
     public function index()
     {
-
-        return view('users.landingPage');
-    }
-
-    public function home()
-    {
-        return view('users.homePage');
-    }
-
-    public function contact()
-    {
-        return view('users.contact');
-    }
-
-    public function book()
-    {
-        $table = new Book();
-        $table = $table->where("user_id", Auth::user()->id);
-        $table = $table->paginate(10);
-
-        $data = [
-            'table' => $table
-        ];
-
-        return view('users.book', $data);
-    }
-
-    public function profile()
-    {
         $result = Auth::user();
 
         $data = [
@@ -70,13 +41,6 @@ class ProfileController extends Controller
     }
 
     public function update(UpdateRequest $request)
-        {
-            try {
-                $result = Auth::user();
-        return view('users.profile', $data);
-    }
-
-    public function profile_update(UpdateRequest $request)
     {
         try {
             $result = Auth::user();
@@ -112,12 +76,7 @@ class ProfileController extends Controller
                 alert()->html('Berhasil','Data berhasil diubah','success'); 
                 return redirect()->route('user.profile.index');
 
-            } catch (\Throwable $e) {
-                Log::emergency($e->getMessage());
-
-            alert()->error('Gagal',$e->getMessage());
-                $avatar = $upload["Path"];
-            } else {
+            }else {
                 $avatar = $result->avatar;
             }
 
@@ -136,12 +95,12 @@ class ProfileController extends Controller
             ]);
 
             alert()->html('Berhasil', 'Data berhasil diubah', 'success');
-            return redirect()->route('user.profile');
+            return redirect()->route('user.profile.edit');
         } catch (\Throwable $e) {
             Log::emergency($e->getMessage());
 
             alert()->error('Gagal', $e->getMessage());
-            return redirect()->route('user.profile')->withInput();
+            return redirect()->route('user.profile.edit')->withInput();
         }
     }
 }

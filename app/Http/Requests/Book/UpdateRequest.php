@@ -60,7 +60,7 @@ class UpdateRequest extends FormRequest
                 $this->redirect = route("dashboard.books.edit",request()->route()->parameter("id"));
             }
             else{
-                $this->redirect = route("pustaka.edit",request()->route()->parameter("pustaka"));
+                $this->redirect = route("user.pustaka.edit",request()->route()->parameter("pustaka"));
             }
             
         }
