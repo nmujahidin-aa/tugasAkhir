@@ -20,6 +20,35 @@ class ProfileController extends Controller
 
     public function index()
     {
+
+        return view('users.landingPage');
+    }
+
+    public function home()
+    {
+        return view('users.homePage');
+    }
+
+    public function contact()
+    {
+        return view('users.contact');
+    }
+
+    public function book()
+    {
+        $table = new Book();
+        $table = $table->where("user_id", Auth::user()->id);
+        $table = $table->paginate(10);
+
+        $data = [
+            'table' => $table
+        ];
+
+        return view('users.book', $data);
+    }
+
+    public function profile()
+    {
         $result = Auth::user();
 
         $data = [
@@ -44,24 +73,25 @@ class ProfileController extends Controller
         {
             try {
                 $result = Auth::user();
+        return view('users.profile', $data);
+    }
 
-                $name = $request->name;
-                $email = $request->email;
-                $phone = $request->phone;
-                $password = $request->password;
-                $avatar = $request->file("avatar");
+    public function profile_update(UpdateRequest $request)
+    {
+        try {
+            $result = Auth::user();
 
-                if($avatar){
-                    $upload = UploadHelper::upload_file($avatar,'user-avatar',UserEnum::EXT_AVATAR);
+            $name = $request->name;
+            $email = $request->email;
+            $phone = $request->phone;
+            $password = $request->password;
+            $avatar = $request->file("avatar");
 
-                    if($upload["IsError"] == TRUE){
-                        throw new Error($upload["Message"]);
-                    }
+            if ($avatar) {
+                $upload = UploadHelper::upload_file($avatar, 'user-avatar', UserEnum::EXT_AVATAR);
 
-                    $avatar = $upload["Path"];
-                }
-                else{
-                    $avatar = $result->avatar;
+                if ($upload["IsError"] == TRUE) {
+                    throw new Error($upload["Message"]);
                 }
 
                 if($password){
@@ -86,6 +116,31 @@ class ProfileController extends Controller
                 Log::emergency($e->getMessage());
 
             alert()->error('Gagal',$e->getMessage());
+                $avatar = $upload["Path"];
+            } else {
+                $avatar = $result->avatar;
+            }
+
+            if ($password) {
+                $password = bcrypt($password);
+            } else {
+                $password = $result->password;
+            }
+
+            $result->update([
+                'name' => $name,
+                'email' => $email,
+                'phone' => $phone,
+                'password' => bcrypt($password),
+                'avatar' => $avatar,
+            ]);
+
+            alert()->html('Berhasil', 'Data berhasil diubah', 'success');
+            return redirect()->route('user.profile');
+        } catch (\Throwable $e) {
+            Log::emergency($e->getMessage());
+
+            alert()->error('Gagal', $e->getMessage());
             return redirect()->route('user.profile')->withInput();
         }
     }
