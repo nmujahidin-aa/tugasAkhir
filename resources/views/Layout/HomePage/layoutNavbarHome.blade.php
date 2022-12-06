@@ -53,7 +53,7 @@
       
       <ul id="navbar-menu" class="navbar-nav my-3 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          @if(!request()->routeIs('user.pustaka.create','user.pustaka.edit'))
+          @if(!request()->routeIs('user.pustaka.create','user.pustaka.edit','user.pustaka.index'))
           <a href="{{route('user.pustaka.create')}} " class="btn btn-primary px-3" style="border-radius: 50px;"> Upload </a>
           @endif
         </li>
