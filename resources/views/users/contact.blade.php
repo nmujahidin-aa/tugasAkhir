@@ -8,22 +8,29 @@
 			<div class="card">
 				<h5 style="text-align: center; margin-top: 20px; font-weight: bold;">Hubungi Kami</h5>
 				<div class="card-body">
-					<div class="mb-3">
-						<label for="emailcontact" class="form-label">Alamat Email</label>
-						<input type="email" class="form-control" id="emailcontact" placeholder="name@example.com">
-					</div>
-					<div class="mb-3">
-						<label for="namecontact" class="form-label">Nama Lengkap</label>
-						<input type="text" class="form-control" id="namacontact">
-					</div>
-					<div class="mb-3">
-						<label for="namecontact" class="form-label">Subjek</label>
-						<input type="text" class="form-control" id="subjekcontact">
-					</div>
-					<div class="mb-3">
-						<label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-						<textarea class="form-control" id="pesancontact" rows="5"></textarea>
-					</div>
+					<form action="">
+						<div class="mb-3">
+							<label for="emailcontact" class="form-label">Alamat Email</label>
+							<input type="email" class="form-control" id="emailcontact" placeholder="name@example.com">
+						</div>
+						<div class="mb-3">
+							<label for="namecontact" class="form-label">Nama Lengkap</label>
+							<input type="text" class="form-control" id="namacontact">
+						</div>
+						<div class="mb-3">
+							<label for="namecontact" class="form-label">Subjek</label>
+							<input type="text" class="form-control" id="subjekcontact">
+						</div>
+						<div class="mb-3">
+							<label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
+							<textarea class="form-control" id="pesancontact" rows="5"></textarea>
+						</div>
+						<div class="row justify-content-center" style="text-align: center;">
+							<div class="col-2">
+								<button class="btn btn-primary">Kirim</button>
+							</div>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
