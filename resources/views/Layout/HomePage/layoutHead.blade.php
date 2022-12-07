@@ -7,3 +7,4 @@
 
 
 <link href="{{URL::to('/')}}/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{URL::to('/')}}/assets/css/slick.css">
