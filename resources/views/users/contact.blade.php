@@ -2,7 +2,7 @@
 @section('title', 'Contact')
 @section('content')
 
-<div class="container" style="margin-top: 70px; background: #e9ecef; min-height:27rem">
+<div class="container" style="margin-top: 65px; padding-bottom: 100px; background: #e9ecef; min-height:27rem">
 	<div class="row justify-content-center">
 		<div class="col-md-12 col-lg-8" style="margin-top:20px">
 			<div class="card">
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row justify-content-center" style="margin-top: 20px; margin-bottom:20px;">
+	<div class="row justify-content-center" style="margin-top: 20px;">
 		<div class="col-md-12 col-lg-8">
 			<div class="card">
 				<h5 style="text-align: center; margin-top: 20px; font-weight: bold;">Our Contact</h5>

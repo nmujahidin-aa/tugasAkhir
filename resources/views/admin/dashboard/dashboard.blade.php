@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-lg-4">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body bg-warning">
                     <h3>{{$total_categories}}</h3>
                     <h4>Total Kategori Buku</h4>
                 </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="col-lg-4">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body bg-secondary">
                     <h3>{{$total_books}}</h3>
                     <h4>Total Buku</h4>
                 </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="col-lg-4">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body bg-info">
                     <h3>{{$total_user}}</h3>
                     <h4>Total User</h4>
                 </div>
