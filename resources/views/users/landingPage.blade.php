@@ -117,7 +117,7 @@
   </div>
 </section><!-- End Services Section -->
 
-<!-- ======= Team Section ======= -->
+<!-- ======= Testimonial Section ======= -->
 <section id="team" class="team">
   <div class="container">
 
@@ -127,101 +127,24 @@
     </div>
 
     <div class="tim">
-
-      <div class="my-3" data-aos="zoom-in" data-aos-delay="100">
-        <div class="member">
-          <img src="image/team/team-1.jpg" class="img-fluid" alt="">
+      @foreach($table as $index => $row)
+      <div class="my-3 mx-1 " data-aos="zoom-in" data-aos-delay="100">
+        <div class="member rounded">
+          <img src="{{asset('storage/'.$row->foto)}}" class="img-fluid" alt="">
           <div class="member-info">
             <div class="member-info-content">
-              <h4>Walter White</h4>
-              <span>Chief Executive Officer</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <h4>{{$row->name}}</h4>
+              <span>{{$row->description}}</span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="my-3" data-aos="zoom-in" data-aos-delay="200">
-        <div class="member">
-          <img src="image/team/team-2.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>Sarah Jhonson</h4>
-              <span>Product Manager</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-3" data-aos="zoom-in" data-aos-delay="300">
-        <div class="member">
-          <img src="image/team/team-3.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>William Anderson</h4>
-              <span>CTO</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-3" data-aos="zoom-in" data-aos-delay="400">
-        <div class="member">
-          <img src="image/team/team-4.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="my-3" data-aos="zoom-in" data-aos-delay="400">
-        <div class="member">
-          <img src="image/team/team-4.jpg" class="img-fluid" alt="">
-          <div class="member-info">
-            <div class="member-info-content">
-              <h4>Amanda Jepson</h4>
-              <span>Accountant</span>
-            </div>
-            <div class="social">
-              <a href=""><i class="bi bi-twitter"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      @endforeach
     </div>
 
   </div>
 </section>
+
 <!-- End Team Section -->
 
 <hr class="container">

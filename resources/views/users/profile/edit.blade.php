@@ -1,7 +1,7 @@
 @extends('layout.HomePage.master')
 @section('content')
 
-<div class="container">
+<div class="container" style="padding-bottom: 50px;">
 	
 	<h1 class="text-center" style="padding-top: 20px;">Edit Profil</h1>
 	<div class="card">

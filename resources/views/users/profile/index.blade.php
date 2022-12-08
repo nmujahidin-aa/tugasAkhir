@@ -1,7 +1,7 @@
 @extends('layout.HomePage.master')
 @section('content')
 
-<div class="container">
+<div class="container" style="padding-bottom: 40px;">
 	
 	  <div style="padding-top: 30px;">
 	    <h1 class="text-center">Profile Saya</h1>
@@ -13,7 +13,7 @@
 	  	<img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 150px; width: 150px;">
 	  </div>
 
-	  <div class="card my-4">
+	  <div class="card" style="margin-top: 20px;">
 	  	<div class="card-body">
 	  		<div class="form-outline my-3">
 	  		  <label class="form-label" for="nama">Nama Lengkap</label>
