@@ -20,7 +20,7 @@
                                 <th class="d-none d-xl-table-cell">Foto</th>
                                 <th class="d-none d-xl-table-cell">Nama</th>
                                 <th class="d-none d-xl-table-cell">Description</th>
-                                <th class="d-none d-xl-table-cell">Aksi</th>
+                                <th class="d-none d-xl-table-cell" style="min-inline-size: 100px;">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>

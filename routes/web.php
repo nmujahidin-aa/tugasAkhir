@@ -4,6 +4,7 @@ use App\Http\Controllers\User\UsersController;
 
 use App\Http\Controllers\User\PustakaController;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\User\NewsController;
 use App\Http\Controllers\User\ContactController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
@@ -35,6 +36,7 @@ Route::get('/logout', [LogoutController::class, 'logout'])->name("logout.post");
 
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/home', [HomeController::class, 'index'])->name("homepage.index");
+	Route::get('/news', [NewsController::class, 'index'])->name("news.index");
 
 	Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
 

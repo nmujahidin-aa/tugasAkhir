@@ -7,7 +7,7 @@
 		<div class="col-md-12 col-lg-8" style="margin-top:20px">
 			<div class="card">
 				<h5 style="text-align: center; margin-top: 20px; font-weight: bold;">Hubungi Kami</h5>
-				<div class="card-body">
+				<div class="card-body shadow">
 					<form action="">
 						<div class="mb-3">
 							<label for="emailcontact" class="form-label">Alamat Email</label>
@@ -39,7 +39,7 @@
 		<div class="col-md-12 col-lg-8">
 			<div class="card">
 				<h5 style="text-align: center; margin-top: 20px; font-weight: bold;">Our Contact</h5>
-				<div class="card-body">
+				<div class="card-body shadow">
 					<p class="card-text" style="text-align: center; margin-top: 20px;">Anda juga dapat menghubungi Kami melalui platform sosial media kami yang tersedia.</p>
 					<br>
 					<div class="col" style="text-align: center; margin-bottom: 20px;">

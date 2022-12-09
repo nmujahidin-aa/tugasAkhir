@@ -26,7 +26,7 @@
           <a class="nav-link @if(request()->routeIs('homepage.index')) active @endif" aria-current="page" href="{{route('homepage.index')}} ">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href=" ">News</a>
+          <a class="nav-link nav-link @if(request()->routeIs('news.index')) active @endif" aria-current="page" href="{{route('news.index')}} ">News</a>
         </li>
         <li class="nav-item">
           <a class="nav-link @if(request()->routeIs('contact.index')) active @endif" aria-current="page" href="{{route('contact.index')}} ">Contact</a>
@@ -41,7 +41,7 @@
 
       <div class="mx-2 dropdown">
         <a class="" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="border-color: transparent;">
-          <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 6vh;">
+          <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 6vh; width: 6vh;">
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="{{route('user.profile.index')}} ">Profil Saya</a></li>

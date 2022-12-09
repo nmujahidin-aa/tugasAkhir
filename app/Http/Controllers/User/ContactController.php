@@ -19,6 +19,6 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('users.contact');
+        return view('users.contact.contact');
     }
 }
