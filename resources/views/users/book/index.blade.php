@@ -16,14 +16,14 @@
 								<th>Judul</th>
 								<th>Author</th>
 								<th>Published At</th>
-								<th>Aksi</th>
+								<th style="min-inline-size: 100px;">Aksi</th>
 							</thead>
 							<tbody>
 								@forelse($table as $index => $row)
 								<tr>
 									<td>{{$table->firstItem() + $index}}</td>
 									<td>
-										<a href="{{asset('storage/'.$row->file)}}" class="btn btn-success btn-sm">Lihat File</a>
+										<a href="{{asset('storage/'.$row->file)}}" class="btn btn-sm btn-success ">Lihat File</a>
 									</td>
 									<td>{{$row->title}}</td>
 									<td>{{$row->author}}</td>

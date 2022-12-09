@@ -26,7 +26,7 @@ class ProfileController extends Controller
             'result' => $result
         ];
 
-        return view('users.profile.index',$data);
+        return view('users.profile.index', $data);
     }
 
     public function edit()
@@ -37,7 +37,7 @@ class ProfileController extends Controller
             'result' => $result
         ];
 
-        return view('users.profile.edit',$data);
+        return view('users.profile.edit', $data);
     }
 
     public function update(UpdateRequest $request)
@@ -58,25 +58,8 @@ class ProfileController extends Controller
                     throw new Error($upload["Message"]);
                 }
 
-                if($password){
-                    $password = bcrypt($password);
-                }
-                else{
-                    $password = $result->password;
-                }
-
-                $result->update([
-                    'name' => $name,
-                    'email' => $email,
-                    'phone' => $phone,
-                    'password' => bcrypt($password),
-                    'avatar' => $avatar,
-                ]);
-
-                alert()->html('Berhasil','Data berhasil diubah','success'); 
-                return redirect()->route('user.profile.index');
-
-            }else {
+                $avatar = $upload["Path"];
+            } else {
                 $avatar = $result->avatar;
             }
 
@@ -90,7 +73,7 @@ class ProfileController extends Controller
                 'name' => $name,
                 'email' => $email,
                 'phone' => $phone,
-                'password' => bcrypt($password),
+                'password' => $password,
                 'avatar' => $avatar,
             ]);
 

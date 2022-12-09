@@ -18,13 +18,14 @@ use Error;
 
 class HomeController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->route = "home.";
         $this->view = "users.homePage";
         $this->book = new Book();
         $this->category = new Category();
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -34,12 +35,12 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $table = $this->book;
-        $table = $table->orderBy("created_at","DESC");
-        $table = $table->get();
+        $table = $table->orderBy("created_at", "DESC");
+        $table = $table->paginate(2);
 
         $data = [
             'table' => $table,
         ];
-        return view($this->view,$data);
+        return view($this->view, $data);
     }
 }

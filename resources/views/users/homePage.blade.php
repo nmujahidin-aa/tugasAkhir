@@ -33,6 +33,10 @@
 					</div>
 				</div>
 				@endforeach
+
+				<div>
+					{!!$table->links()!!}
+				</div>
 			</div>
 
 
