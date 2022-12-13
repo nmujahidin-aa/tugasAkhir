@@ -13,47 +13,38 @@
 	          class="img-fluid" alt="Sample image">
 	      </div>
 	      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-	        <form  method="POST" action="{{route('login.index')}}">
+	        <form  method="POST" action="{{route('reset-password.post')}}">
 	        	@csrf
+	         <input type="hidden" name="token" value="{{$token}}">
 	          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
 	          	<img src="image/logo.png" class="" style="height: 50px;">
 	            <p class="lead fw-normal mb-0 me-3">Rumah Pustaka</p>
 	          </div>
 
 	          <div class="divider d-flex align-items-center my-4" >
-	            <p class="text-center fw-bold mx-3 mb-0">Masuk</p>
+	            <p class="text-center fw-bold mx-3 mb-0">Reset Password</p>
 	          </div>
 
 	          <!-- Email input -->
 	          <div class="form-floating mb-4">
 	            <input type="email" id="flotingEmail" name="email" class="form-control form-control-lg @error('email') is-invalid @enderror"
-	              placeholder="Example@email.com" value="{{old('email')}}" autocomplete="off">
+	              placeholder="Example@email.com" value="{{old('email',$email)}}" autocomplete="off">
 	            <label class="form-label " for="flotingEmail">Email address</label>
 	          </div>
 
-	          <!-- Password input -->
-	          <div class="form-floating mb-3">
-	            <input type="password" id="password" name="password" class="form-control form-control-lg @error('password') is-invalid @enderror"
-	              placeholder="Enter password">
-	            <label class="form-label" for="password">Password</label>
+	          <div class="form-floating mb-4">
+	            <input type="password" id="flotingEmail" name="password" class="form-control form-control-lg" value="" autocomplete="off">
+	            <label class="form-label " for="flotingEmail">Password</label>
 	          </div>
 
-	          <div class="d-flex justify-content-between align-items-center">
-	            <!-- Checkbox -->
-	            <div class="form-check mb-0">
-	              <input class="form-check-input me-2" type="checkbox" value="1" id="form2Example3" name="rememberme" />
-	              <label class="form-check-label" for="form2Example3">
-	                Remember me
-	              </label>
-	            </div>
-	            <a href="{{route('forgot-password.index')}} " class="text-body text-decoration-none">Forgot password?</a>
+	          <div class="form-floating mb-4">
+	            <input type="password" id="flotingEmail" name="password_confirmation" class="form-control form-control-lg" value="" autocomplete="off">
+	            <label class="form-label " for="flotingEmail">Konfirmasi Password</label>
 	          </div>
 
 	          <div class="text-center text-lg-start mt-4 pt-2">
 	            <button class="btn btn-primary btn-lg"
-	              style="padding-left: 2.5rem; padding-right: 2.5rem;">Masuk</button>
-	            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="{{route('register.index')}}"
-	                class="link-danger text-decoration-none">Register</a></p>
+	              style="padding-left: 2.5rem; padding-right: 2.5rem;">Ubah Password</button>
 	          </div>
 
 	        </form>

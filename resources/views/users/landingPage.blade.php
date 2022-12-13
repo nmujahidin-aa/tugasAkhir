@@ -98,7 +98,7 @@
     <div class="row">
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon-box">
-          <div class="icon"><img src="image/network.png"></div>
+          <div class="icon"><img src="image/lab.png"></div>
           <p class="title">Percepat Penelitianmu</h4>
           <p class="description">Dapatkan akses ke jutaan makalah penelitian dan tetap up to date dengan topik-topik yang relevan dengan tulisanmu</p>
         </div>
@@ -106,7 +106,7 @@
 
       <div class="col-md-6 col-lg-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
         <div class="icon-box">
-          <div class="icon"><img src="image/money-growth.png"> </div>
+          <div class="icon"><img src="image/audience.png"> </div>
           <h4 class="title">Kembangkan Audiensmu</h4>
           <p class="description">Bagikan tulisanmu dengan akademisi lain, kembangkan audiensmu, dan trek pengaruhmu di bidang mu</p>
         </div>
@@ -130,7 +130,7 @@
       @foreach($table as $index => $row)
       <div class="my-3 mx-1 " data-aos="zoom-in" data-aos-delay="100">
         <div class="member rounded">
-          <img src="{{asset('storage/'.$row->foto)}}" class="img-fluid" alt="">
+          <img src="{{asset('storage/'.$row->foto)}}" class="img-fluid" alt="" style="height: 50vh; width: 70vh;">
           <div class="member-info">
             <div class="member-info-content">
               <h4>{{$row->name}}</h4>
@@ -147,15 +147,14 @@
 
 <!-- End Team Section -->
 
-<hr class="container">
-<div class="container py-5">
+<div class="container-fluid py-5">
 	<div class="card">
 		<div class="card-body bg-success shadow">
 			
-			<h3 class="text-center container text-white py-5"><strong>Tingkatkan penelitian Anda dan bergabunglah dengan komunitas yang terdiri dari jutaan ilmuwan</h3>
+			<h3 class="text-center container text-white py-5"><strong>"Tingkatkan penelitian Anda dan bergabunglah dengan komunitas yang terdiri dari jutaan ilmuwan"</h3>
 			<a href="/login">
 				<div class="text-center">
-					<div class="btn text-success px-5" style="background: #fff;"><strong>Login</strong></div>
+					<div class="btn text-success px-5" style="background: #fff;"><strong>Masuk</strong></div>
 				</div>
 			</a>
 		</div>

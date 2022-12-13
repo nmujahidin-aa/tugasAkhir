@@ -16,7 +16,7 @@
 						</div>
 
 						<div class="mt-2">
-							<span class="text-center " style="padding-bottom: 3px; padding-left: 10px; padding-right: 10px; max-width: 15%; background-color: #C5E8E5; font-size: 13px;">{{$row->category->name ?? ""}}</span>
+							<span class="text-center" style="font-size: 13px;"><mark class="px-2 py-1" style="background-color: #C5E8E5;">{{$row->category->name ?? ""}}</mark> </span>
 							<span class="text-muted" style="font-size: 13px;"><i class="fa fa-history"></i> {{date('d-m-Y',strtotime($row->published_at))}}</span>
 						</div>
 
@@ -45,6 +45,20 @@
 					<div class="card-body"></div>
 				</div>
 			</div>
+			
+			<div style="position: fixed; bottom: 20px; left: 90%;">
+				<div class="collapse" id="collapseExample">
+				  <div class="card card-body ">
+				    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+				  </div>
+				</div>
+				<p>
+				  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+				    <span><i class="fa fa-question-circle"></i> </span>
+				  </button>
+				</p>
+			</div>
+
 		</div>
 	</div>
 </div>

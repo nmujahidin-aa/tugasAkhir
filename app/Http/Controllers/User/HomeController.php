@@ -34,8 +34,13 @@ class HomeController extends Controller
 
     public function index(Request $request)
     {
+        $search = $request->search;
+        
         $table = $this->book;
         $table = $table->orderBy("created_at", "DESC");
+        if($search){
+            $table = $table->where("title","like","%".$search."%");
+        }
         $table = $table->paginate(2);
 
         $data = [

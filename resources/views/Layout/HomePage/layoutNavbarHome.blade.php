@@ -26,16 +26,16 @@
           <a class="nav-link @if(request()->routeIs('homepage.index')) active @endif" aria-current="page" href="{{route('homepage.index')}} ">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link @if(request()->routeIs('news.index')) active @endif" aria-current="page" href="{{route('news.index')}} ">News</a>
+          <a class="nav-link nav-link @if(request()->routeIs('faq.index')) active @endif" aria-current="page" href="{{route('faq.index')}} ">FAQ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link @if(request()->routeIs('contact.index')) active @endif" aria-current="page" href="{{route('contact.index')}} ">Contact</a>
         </li>
       </ul>
-      <div class=" ms-auto mx-2">
-        <form class="d-flex">
-          <input class="form-control" type="search" id="search_val" placeholder="Search" aria-label="Search">
-          <button class="bx bx-search" id="btn_search" type="submit" style="border-color: transparent; background-color: transparent;"></button>
+      <div class=" ms-auto">
+        <form class="input-group" action="{{route('homepage.index')}} ">
+          <input type="text" class="form-control" id="search_val" placeholder="Search" name="search" aria-label="Search">
+          <span class="input-group-text" id="btn_search" type="submit"><i class="fa fa-search"></i> </span>
         </form>
       </div>
 
@@ -62,6 +62,7 @@
   </div>
 </nav>
 
+<!-- Tampilan Phone -->
 
 <div class="offcanvas offcanvas-top dark-bg" tabindex="-1" id="offcanvasSearch" aria-labelledby="offcanvasTopLabel">
   <!-- Offcanvas Header Start -->
@@ -72,12 +73,12 @@
 
   <!-- Offcanvas Body Start-->
   <div class="offcanvas-body">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row height d-flex">
         <div class="col-md-12">
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" id="search_val" placeholder="Search" aria-label="Search">
-            <button class="btn btn-success" id="btn_search" type="submit">Search</button>
+          <form class="d-flex input-group">
+            <input type="text" class="form-control" id="search_val" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+            <span class="input-group-text" id="btn_search"><i class="fa fa-search"></i></span>
           </form>
         </div>
       </div>
@@ -98,35 +99,33 @@
   </div>
   <div class="offcanvas-body">
     <div class="mt-2 pt-2">
-      
      
-
       
-      <div class="card">
-        <div class="card-body shadow-sm">
-          
-          <nav class="navbar">
-            <div class="container-fluid">
-              <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 7vh;">
-              <div class="bx bx-chevron-down fs-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
-              </div>
-            </div>
-          </nav>
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="">
-              <hr>
-              <a class="dropdown-item menu-item-collapse " href="{{route('user.profile.index')}} ">Profil Saya</a>
-              <a class="dropdown-item menu-item-collapse " href="{{route('user.pustaka.index')}} ">Buku Saya</a>
-              <a class="dropdown-item menu-item-collapse " href="{{route('logout.post')}}">Keluar</a>
-            </div>
+        <div class="container d-flex justify-content-center">
+          <img src="@if(!empty(Auth::user()->avatar)) {{asset('storage/'.Auth::user()->avatar)}} @else https://avatars.dicebear.com/api/initials/{{ Auth::user()->name  ?? null}}.svg?margin=10 @endif" class="rounded-circle" style="height: 17vh;">
           </div>
+        </div>
 
+      <nav class="navbar container justify-content-center">
+        <span><strong>Hai,</strong> {{Auth::user()->name}}</span>
+        <div class="pt-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent">
+          <i class="bx bx-chevron-down fs-5"></i>
+        </div>
+      </nav>
+
+      <div class="collapse" id="navbarToggleExternalContent">
+        <div class="">
+          <hr>
+          <a class="dropdown-item menu-item-collapse " href="{{route('user.profile.index')}} ">Profil Saya</a>
+          <a class="dropdown-item menu-item-collapse " href="{{route('user.pustaka.index')}} ">Buku Saya</a>
+          <a class="dropdown-item menu-item-collapse " href="{{route('logout.post')}}">Keluar</a>
         </div>
       </div>
+      <hr>
 
       <div class="mt-3">
         @if(!request()->routeIs('user.pustaka.create'))
-        <a class="dropdown-item menu-item-collapse " href="{{route('user.pustaka.create')}}"> Upload</a>
+        <a class="dropdown-item menu-item-collapse" href="{{route('user.pustaka.create')}}"> Upload</a>
         @endif
         <a class="dropdown-item menu-item-collapse " href=""> Home</a>
         <a class="dropdown-item menu-item-collapse " href=""> News</a>

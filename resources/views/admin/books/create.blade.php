@@ -8,7 +8,7 @@
 			
 			<div class="container-fluid">
 				
-				<form action="{{route('dashboard.books.store')}}" method="post" enctype='multipart/form-data'">
+				<form action="{{route('dashboard.books.store')}}" method="post" enctype='multipart/form-data'>
 				@csrf
 					<div class="my-3">
 						<input type="file" name="file" class="form-control">

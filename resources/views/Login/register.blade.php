@@ -5,7 +5,7 @@
 </head>
 <body style="background: #ebefee">
   @include('sweetalert::alert')
-  <section class="vh-100">
+  <section class="vh-100" style="background-image: linear-gradient(to bottom right , #f8f9fa , #adb5bd);">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-md-9 col-lg-6 col-xl-5">

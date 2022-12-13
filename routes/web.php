@@ -10,6 +10,7 @@ use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\User\FaqController;
 use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
@@ -34,11 +35,24 @@ Route::post('/register', [RegisterController::class, 'register'])->name("registe
 
 Route::get('/logout', [LogoutController::class, 'logout'])->name("logout.post");
 
+Route::group(["namespace" => "App\Http\Controllers\Auth"], function () {
+	Route::group(["as" => "forgot-password.","prefix" => "forgot-password"], function () {
+		Route::get('/', 'ForgotPasswordController@index')->name('index');
+		Route::post('/', 'ForgotPasswordController@post')->name('post');
+	});
+
+	Route::group(["as" => "reset-password.","prefix" => "reset-password"], function () {
+        Route::get('/', 'ResetPasswordController@index')->name('index');
+        Route::post('/', 'ResetPasswordController@post')->name('post');
+    });
+});
+
 Route::group(['middleware' => ['auth']], function () {
 	Route::get('/home', [HomeController::class, 'index'])->name("homepage.index");
-	Route::get('/news', [NewsController::class, 'index'])->name("news.index");
-
 	Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
+	Route::get('/faq', [FaqController::class, 'index'])->name("faq.index");
+	Route::post('/sendmail', [ContactController::class, 'send'])->name("contact.send");
+
 
 
 	// PREFIX USER
