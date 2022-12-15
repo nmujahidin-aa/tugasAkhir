@@ -15,6 +15,10 @@
 						<label>Nama Kategori</label>
 						<input type="text" value="{{$result->name}}" name="name" class="form-control">
 					</div>
+					<div class="my-3">
+						<label>Icon</label>
+						<input type="text" value="{{$result->icon}}" name="icon" class="form-control">
+					</div>
 
 					<div class="mt-3">
 						<a href="{{route('dashboard.categories.index')}} " class="btn btn-warning">Kembali</a>

@@ -12,10 +12,11 @@ class Category extends Model
     protected $table = "categories";
     protected $fillable = [
         'name',
+        'icon',
     ];
 
     public function books()
     {
-        return $this->hasMany(Book::class, 'category_id','id');
+        return $this->hasMany(Book::class, 'category_id','id','icon');
     }
 }

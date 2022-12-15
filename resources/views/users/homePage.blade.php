@@ -42,21 +42,25 @@
 
 			<div class="col-lg-4 col-md-12">
 				<div class="card shadow-sm my-3" style="margin-top: 10px;">
-					<div class="card-body"></div>
+					<div class="card-body">
+						<h5 class="text-center mb-3"><strong>Pilih Berdasarkan Kategori yang anda mau.</strong></h5>
+						<div class="row">
+							@foreach($category as $index => $row)
+							<div class="col-lg-4 col-sm-3">
+								<div class="card btn btn-outline-info" style="border-color: transparent;">
+									<div class="card-body p-1 ">
+										<a href="{{route('homepage.index')}}?category_id={{$row->id}}" class="text-decoration-none">
+											<i class="fa fa-{{$row->icon}} fs-3"></i>
+											<div style="font-size: 12px;">{{$row->name}}</div>
+										</a>
+									</div>
+								</div>	
+							</div>
+							@endforeach
+						</div>
+
+					</div>
 				</div>
-			</div>
-			
-			<div style="position: fixed; bottom: 20px; left: 90%;">
-				<div class="collapse" id="collapseExample">
-				  <div class="card card-body ">
-				    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-				  </div>
-				</div>
-				<p>
-				  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-				    <span><i class="fa fa-question-circle"></i> </span>
-				  </button>
-				</p>
 			</div>
 
 		</div>

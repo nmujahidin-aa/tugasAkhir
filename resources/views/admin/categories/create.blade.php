@@ -14,6 +14,10 @@
 						<label>Nama Kategori</label>
 						<input type="text" name="name" class="form-control">
 					</div>
+					<div class="my-3">
+						<label>Icon</label>
+						<input type="text" name="icon" class="form-control">
+					</div>
 					
 
 					<div class="mt-3">

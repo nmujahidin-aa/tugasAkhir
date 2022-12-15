@@ -130,7 +130,7 @@
       @foreach($table as $index => $row)
       <div class="my-3 mx-1 " data-aos="zoom-in" data-aos-delay="100">
         <div class="member rounded">
-          <img src="{{asset('storage/'.$row->foto)}}" class="img-fluid" alt="" style="height: 50vh; width: 70vh;">
+          <img src="{{asset('storage/'.$row->foto)}}" class="img-fluid" alt="" style="height: 55vh; width: 70vh;">
           <div class="member-info">
             <div class="member-info-content">
               <h4>{{$row->name}}</h4>
@@ -146,6 +146,33 @@
 </section>
 
 <!-- End Team Section -->
+
+<!-- Section Jumlah Pengguna -->
+<div style="background-color:#ebefee;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-4 text-center">
+        <strong>
+          <h1 class="fs-1" style="font-family: sans-serif;"><b>{{$total_user}}</b></h1>
+          <p class="text-muted">Pengguna Terdaftar</p>
+        </strong>
+      </div>
+      <div class="col-4 text-center">
+        <strong>
+          <h1 class="fs-1" style="font-family: sans-serif;"><b>{{$total_books}}</b></h1>
+          <p class="text-muted">Buku Terupload</p>
+        </strong>
+      </div>
+      <div class="col-4 text-center">
+        <strong>
+          <h1 class="fs-1" style="font-family: sans-serif;"><b>{{$total_categories}}</b></h1>
+          <p class="text-muted">Kategori Tersedia</p>
+        </strong>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Section -->
 
 <div class="container-fluid py-5">
 	<div class="card">

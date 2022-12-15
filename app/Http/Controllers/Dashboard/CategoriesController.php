@@ -61,9 +61,11 @@ class CategoriesController extends Controller
     {
         try {
             $name = $request->name;
+            $icon = $request->icon;
 
             $create = $this->category->create([
                 'name' => $name,
+                'icon' => $icon,
             ]);
 
             alert()->html('Berhasil','Data berhasil ditambahkan','success'); 
@@ -146,9 +148,11 @@ class CategoriesController extends Controller
             }
 
             $name = $request->name;
+            $icon = $request->icon;
 
             $update = $result->update([
                 'name' => $name,
+                'icon' => $icon,
             ]);
 
             alert()->html('Berhasil','Data berhasil update','success'); 

@@ -1,5 +1,5 @@
 @extends('layout.HomePage.master')
-@section('title', 'News')
+@section('title', 'FAQ')
 @section('content')
 
 <div class="container" style="padding-top: 20px; padding-bottom: 20px;">
@@ -7,18 +7,18 @@
 		<div class="col">
 			
 			<div class="accordion accordion-flush" id="accordionFlushExample">
-				@foreach($table as $index => $row)
-			  <div class="accordion-item">
+			@foreach($table as $index => $row)
+			  <div class="accordion-item my-2 ">
 			    <h2 class="accordion-header" id="flush-headingOne">
 			      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{$index}}" aria-expanded="false" aria-controls="flush-collapseOne-{{$index}}">
 			        #{{$index+1}} {{$row->question}}
 			      </button>
 			    </h2>
 			    <div id="flush-collapseOne-{{$index}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-			      <div class="accordion-body">{{$row->answer}}</div>
+			      <div class="accordion-body" style="background-color: #e2eafc">{{$row->answer}}</div>
 			    </div>
 			  </div>
-			  @endforeach
+			@endforeach
 			</div>
 
 		</div>
