@@ -49,7 +49,7 @@
 							<div class="col-lg-4 col-sm-3">
 								<div class="card btn btn-outline-info" style="border-color: transparent;">
 									<div class="card-body p-1 ">
-										<a href="{{route('homepage.index')}}?category_id={{$row->id}}" class="text-decoration-none">
+										<a href="{{route('homepage.index')}}?category_id={{$row->id}}" class="text-decoration-none text-muted">
 											<i class="fa fa-{{$row->icon}} fs-3"></i>
 											<div style="font-size: 12px;">{{$row->name}}</div>
 										</a>

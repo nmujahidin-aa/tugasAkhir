@@ -76,8 +76,8 @@
     <div class="container-fluid">
       <div class="row height d-flex">
         <div class="col-md-12">
-          <form class="d-flex input-group">
-            <input type="text" class="form-control" id="search_val" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+          <form class="d-flex input-group" action="{{route('homepage.index')}} ">
+            <input type="text" class="form-control" name="search" id="search_val" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" >
             <span class="input-group-text" id="btn_search"><i class="fa fa-search"></i></span>
           </form>
         </div>
@@ -123,13 +123,13 @@
       </div>
       <hr>
 
-      <div class="mt-3">
+      <div class="mt-3 ">
         @if(!request()->routeIs('user.pustaka.create'))
         <a class="dropdown-item menu-item-collapse" href="{{route('user.pustaka.create')}}"> Upload</a>
         @endif
-        <a class="dropdown-item menu-item-collapse " href=""> Home</a>
-        <a class="dropdown-item menu-item-collapse " href=""> News</a>
-        <a class="dropdown-item menu-item-collapse " href=""> Contact</a>
+        <a class="dropdown-item menu-item-collapse text-dark nav-link @if(request()->routeIs('homepage.index')) active @endif" href="{{route('homepage.index')}}"> Home</a>
+        <a class="dropdown-item menu-item-collapse text-dark nav-link nav-link @if(request()->routeIs('faq.index')) active @endif" href="{{route('faq.index')}}"> FAQ</a>
+        <a class="dropdown-item menu-item-collapse text-dark nav-link @if(request()->routeIs('contact.index')) active @endif" href="{{route('contact.index')}}"> Contact</a>
       </div>
 
 
