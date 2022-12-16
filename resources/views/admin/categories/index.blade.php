@@ -17,16 +17,16 @@
                     <table class="table table-hover my-0" id="datatable">
                         <thead>
                             <tr>
+                                <th class="d-none d-xl-table-cell text-center" style="max-width: 25px;">Icon</th>
                                 <th class="d-none d-xl-table-cell">Kategori</th>
-                                <th class="d-none d-xl-table-cell">Icon</th>
                                 <th class="d-none d-xl-table-cell">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($table as $index => $row)
                             <tr>
+                            <td class="text-center"><i class="fa fa-{{$row->icon}}"></i></td>
                                 <td>{{$row->name}}</td>
-                                <td><i class="fa fa-{{$row->icon}}"></i></td>
                                 <td class="text-end">
                                     <a href="{{route('dashboard.categories.edit',$row->id)}}" class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></a>
                                     <a href="#" class="btn btn-sm btn-danger btn-delete" data-id="{{$row->id}}"><i class="fa fa-trash"></i></a> 
