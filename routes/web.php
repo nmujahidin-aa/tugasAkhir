@@ -45,14 +45,19 @@ Route::group(["namespace" => "App\Http\Controllers\Auth"], function () {
         Route::get('/', 'ResetPasswordController@index')->name('index');
         Route::post('/', 'ResetPasswordController@post')->name('post');
     });
+
+    Route::group(["as" => "verification.","prefix" => "email"], function () {
+        Route::get('verify', 'VerificationController@verificationNotice')->name('notice')->middleware('auth');
+        Route::get('verify/{id}/{hash}', 'VerificationController@verifyUser')->name('verify')->middleware(['signed']);
+        Route::post('verification-notification', 'VerificationController@verificationResend')->name('send')->middleware(['auth', 'throttle:6,1']);
+    });
 });
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => ['auth','verified']], function () {
 	Route::get('/home', [HomeController::class, 'index'])->name("homepage.index");
 	Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
 	Route::get('/faq', [FaqController::class, 'index'])->name("faq.index");
 	Route::post('/sendmail', [ContactController::class, 'send'])->name("contact.send");
-
 
 
 	// PREFIX USER

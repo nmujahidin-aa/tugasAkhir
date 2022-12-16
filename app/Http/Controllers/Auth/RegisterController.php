@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use Illuminate\Support\Facades\Log;
 use App\Enums\RoleEnum;
+use Illuminate\Auth\Events\Registered;
 use App\Models\User;
 use Auth;
 use Error;
@@ -35,6 +36,7 @@ class RegisterController extends Controller
             ]);
 
             $user->assignRole(RoleEnum::USER);
+            event(new Registered($user));
 
             alert()->html('Berhasil','Register berhasil','success'); 
             return redirect()->route('login.index');
