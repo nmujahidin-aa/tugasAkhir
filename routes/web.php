@@ -11,6 +11,10 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\User\FaqController;
+use App\Http\Controllers\User\AboutController;
+use App\Http\Controllers\User\KebijakanController;
+use App\Http\Controllers\User\KetentuanController;
+use App\Http\Controllers\User\TeamController;
 use Illuminate\Support\Facades\Route;
 use App\Enums\RoleEnum;
 
@@ -57,6 +61,10 @@ Route::group(['middleware' => ['auth','verified']], function () {
 	Route::get('/home', [HomeController::class, 'index'])->name("homepage.index");
 	Route::get('/contact', [ContactController::class, 'index'])->name("contact.index");
 	Route::get('/faq', [FaqController::class, 'index'])->name("faq.index");
+	Route::get('/about', [AboutController::class, 'index'])->name("about.index");
+	Route::get('/team', [TeamController::class, 'index'])->name("team.index");
+	Route::get('/ketentuan', [KetentuanController::class, 'index'])->name("ketentuan.index");
+	Route::get('/kebijakan', [KebijakanController::class, 'index'])->name("kebijakan.index");
 	Route::post('/sendmail', [ContactController::class, 'send'])->name("contact.send");
 
 
@@ -77,8 +85,6 @@ Route::group(['middleware' => ['auth','verified']], function () {
 			Route::get('/edit', [ProfileController::class, 'edit'])->name("edit");
 			Route::put('/', [ProfileController::class, 'update'])->name("update");
 		});
-
-		
 	});
 
 	

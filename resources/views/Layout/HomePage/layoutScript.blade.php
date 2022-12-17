@@ -6,7 +6,7 @@
 
 <script type="text/javascript" src="{{URL::to('/')}}/assets/js/slick.min.js"></script>
 
-
+<script type="text/javascript" src="{{URL::to('/')}}/assets/js/main.js"></script>
 
 <script type="text/javascript">
 	$('.tim').slick({
